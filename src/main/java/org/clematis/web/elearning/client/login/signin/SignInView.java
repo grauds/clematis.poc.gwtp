@@ -10,10 +10,10 @@ import org.clematis.web.elearning.client.login.navigation.SingnedInGatekeeper;
 import org.clematis.web.elearning.client.place.NameTokens;
 import org.clematis.web.elearning.shared.domain.NamePasswordAuthObject;
 
-import com.gwtplatform.dispatch.shared.DispatchAsync;
+import com.gwtplatform.dispatch.rpc.shared.DispatchAsync;
 import com.gwtplatform.mvp.client.ViewImpl;
 import com.gwtplatform.mvp.client.proxy.PlaceManager;
-import com.gwtplatform.mvp.client.proxy.PlaceRequest;
+import com.gwtplatform.mvp.shared.proxy.PlaceRequest;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;

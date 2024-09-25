@@ -3,14 +3,12 @@ package org.clematis.web.elearning.client.fields;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.google.gwt.user.client.rpc.IsSerializable;
-
 
 /**
  * This class is a container for data describing a single block of elements.
  * It is also used to describe a table-form.
  */
-public class BlockInfo implements IsSerializable {
+public class BlockInfo {
 	private String title;
 	private List<Field> fields;
 	

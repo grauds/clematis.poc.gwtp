@@ -18,13 +18,13 @@ import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Widget;
-import com.gwtplatform.dispatch.shared.DispatchAsync;
+import com.gwtplatform.dispatch.rpc.shared.DispatchAsync;
 import com.gwtplatform.mvp.client.proxy.PlaceManager;
-import com.gwtplatform.mvp.client.proxy.PlaceRequest;
+import com.gwtplatform.mvp.shared.proxy.PlaceRequest;
 
 public class LoginPopupWidget extends Composite {
 
-	private static LoginPopupWidgetUiBinder uiBinder = GWT.create(LoginPopupWidgetUiBinder.class);
+	private static final LoginPopupWidgetUiBinder uiBinder = GWT.create(LoginPopupWidgetUiBinder.class);
 
 	interface LoginPopupWidgetUiBinder extends
 			UiBinder<Widget, LoginPopupWidget> {

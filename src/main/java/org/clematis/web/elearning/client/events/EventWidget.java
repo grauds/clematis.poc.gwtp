@@ -20,11 +20,11 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Widget;
-import com.gwtplatform.dispatch.shared.DispatchAsync;
+import com.gwtplatform.dispatch.rpc.shared.DispatchAsync;
 
 public class EventWidget extends Composite {
 
-	private static EventWidgetUiBinder uiBinder = GWT
+	private static final EventWidgetUiBinder uiBinder = GWT
 			.create(EventWidgetUiBinder.class);
 
 	interface EventWidgetUiBinder extends UiBinder<Widget, EventWidget> {

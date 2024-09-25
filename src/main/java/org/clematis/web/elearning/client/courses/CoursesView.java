@@ -6,7 +6,6 @@ import java.util.List;
 import org.clematis.web.elearning.client.ELP;
 import org.clematis.web.elearning.client.courses.CourseSelectedEvent.CourseSelectedHandler;
 import org.clematis.web.elearning.client.courses.CoursesSelectedEvent.CoursesSelectedHandler;
-import org.clematis.web.elearning.client.courses.GetCoursesGroupResult;
 import org.clematis.web.elearning.client.general.ShowErrorMessageEvent;
 import org.clematis.web.elearning.client.students.StudentTeacherListWidget;
 import org.clematis.web.elearning.client.teachers.GetTeachersAction;
@@ -16,7 +15,7 @@ import org.clematis.web.elearning.shared.domain.Course;
 import org.clematis.web.elearning.shared.domain.CoursesGroup;
 import org.clematis.web.elearning.shared.domain.Teacher;
 
-import com.gwtplatform.dispatch.shared.DispatchAsync;
+import com.gwtplatform.dispatch.rpc.shared.DispatchAsync;
 import com.gwtplatform.mvp.client.ViewImpl;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.event.shared.HandlerRegistration;
@@ -135,7 +134,9 @@ public class CoursesView extends ViewImpl implements CoursesPresenter.MyView, Co
 	public void onCoursesSelected(CoursesSelectedEvent event) {
 		clearTeachers();
 		showTeachersLoader(true);
-		dispatcher.execute(new GetTeachersAction(getSelectedCourses()), new AsyncCallback<GetTeachersResult>() {
+		dispatcher.execute(
+			new GetTeachersAction.Builder().courses(getSelectedCourses()).build(),
+			new AsyncCallback<>() {
 
 			@Override
 			public void onFailure(Throwable caught) {
@@ -155,7 +156,9 @@ public class CoursesView extends ViewImpl implements CoursesPresenter.MyView, Co
 	public void onCourseSelected(CourseSelectedEvent event) {
 		clearTeachers();
 		showTeachersLoader(true);
-		dispatcher.execute(new GetTeachersAction(getSelectedCourses()), new AsyncCallback<GetTeachersResult>() {
+		dispatcher.execute(
+			new GetTeachersAction.Builder().courses(getSelectedCourses()).build(),
+			new AsyncCallback<>() {
 
 			@Override
 			public void onFailure(Throwable caught) {

@@ -1,11 +1,10 @@
 package org.clematis.web.elearning.client.place;
 
 import com.gwtplatform.mvp.client.proxy.PlaceManagerImpl;
-import com.gwtplatform.mvp.client.proxy.PlaceRequest;
-import org.clematis.web.elearning.client.place.DefaultPlace;
+import com.gwtplatform.mvp.shared.proxy.PlaceRequest;
 import com.google.inject.Inject;
 import com.google.gwt.event.shared.EventBus;
-import com.gwtplatform.mvp.client.proxy.TokenFormatter;
+import com.gwtplatform.mvp.shared.proxy.TokenFormatter;
 
 public class ApplicationPlaceManager extends PlaceManagerImpl {
 	

@@ -40,19 +40,19 @@ import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.PopupPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.Widget;
-import com.gwtplatform.dispatch.shared.DispatchAsync;
+import com.gwtplatform.dispatch.rpc.shared.DispatchAsync;
 
 public class StudentTeacherListWidget extends Composite {
 
-	private static StudentTeacherListWidgetUiBinder uiBinder = GWT
+	private static final StudentTeacherListWidgetUiBinder uiBinder = GWT
 			.create(StudentTeacherListWidgetUiBinder.class);
 
 	interface StudentTeacherListWidgetUiBinder extends
 			UiBinder<Widget, StudentTeacherListWidget> {
 	}
 	
-	private PopupPanel popupPanel;
-	private SendMailWidget sendMailWidget;
+	private final PopupPanel popupPanel;
+	private final SendMailWidget sendMailWidget;
 	
 	@UiField FlexTable info;
 	@UiField VerticalPanel teacherCourses;	
@@ -95,7 +95,11 @@ public class StudentTeacherListWidget extends Composite {
 	
 	@UiHandler("joinClass")
 	public void onJoinClass(ClickEvent e) {
-		dispatcher.execute(new GetAvailableClassesAction(ELP.getConnectionState().user.getUser().getId(), teacher.getId()), new AsyncCallback<GetAvailableClassesResult>() {
+		dispatcher.execute(
+			new GetAvailableClassesAction.Builder(
+				ELP.getConnectionState().user.getUser().getId()
+			).teacherId(teacher.getId()).build(),
+			new AsyncCallback<>() {
 
 			@Override
 			public void onFailure(Throwable caught) {
@@ -140,7 +144,10 @@ public class StudentTeacherListWidget extends Composite {
 	
 	@UiHandler("leaveClass")
 	public void onLeaveClass(ClickEvent e) {
-		dispatcher.execute(new GetStudentClassesAction(ELP.getConnectionState().user.getUser().getId(), teacher.getId()), new AsyncCallback<GetStudentClassesResult>() {
+		dispatcher.execute(new GetStudentClassesAction.Builder(
+				ELP.getConnectionState().user.getUser().getId()
+			).teacherId(teacher.getId()).build(),
+			new AsyncCallback<>() {
 
 			@Override
 			public void onFailure(Throwable caught) {
@@ -229,7 +236,10 @@ public class StudentTeacherListWidget extends Composite {
 	
 	protected void refreshEnrollmentButtons() {
 		
-		dispatcher.execute(new GetAvailableClassesAction(ELP.getConnectionState().user.getUser().getId(), teacher.getId()), new AsyncCallback<GetAvailableClassesResult>() {
+		dispatcher.execute(new GetAvailableClassesAction.Builder(
+				ELP.getConnectionState().user.getUser().getId()
+			).teacherId(teacher.getId()).build(),
+			new AsyncCallback<>() {
 
 			@Override
 			public void onFailure(Throwable caught) {
@@ -238,15 +248,7 @@ public class StudentTeacherListWidget extends Composite {
 
 			@Override
 			public void onSuccess(GetAvailableClassesResult result) {
-				if (result.getClasses().size() > 0) {
-
-	  			    joinClass.setVisible(true); 
-					
-				} else {
-					 
-					joinClass.setVisible(false); 
-					
-				}
+                joinClass.setVisible(!result.getClasses().isEmpty());
 			}
 		});	
 		

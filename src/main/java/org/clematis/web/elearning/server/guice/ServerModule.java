@@ -39,7 +39,7 @@ import org.clematis.web.elearning.server.handlers.teachers.GetTeacherClassesHand
 import org.clematis.web.elearning.server.handlers.teachers.GetTeacherCoursesHandler;
 import org.clematis.web.elearning.server.handlers.teachers.GetTeachersHandler;
 
-import com.gwtplatform.dispatch.server.guice.HandlerModule;
+import com.gwtplatform.dispatch.rpc.server.guice.HandlerModule;
 
 public class ServerModule extends HandlerModule {
 

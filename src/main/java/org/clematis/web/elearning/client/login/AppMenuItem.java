@@ -2,9 +2,8 @@ package org.clematis.web.elearning.client.login;
 
 import java.io.Serializable;
 import java.util.HashMap;
-import com.google.gwt.user.client.rpc.IsSerializable;
 
-public class AppMenuItem implements IsSerializable, Serializable {
+public class AppMenuItem implements Serializable {
 	private static final long serialVersionUID = -7417148603528657747L;
 	/**
 	 * This is the name of the node's property that stores information about AppMenuItem.

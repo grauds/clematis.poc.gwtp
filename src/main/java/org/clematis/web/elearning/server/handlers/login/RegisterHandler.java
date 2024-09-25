@@ -12,8 +12,8 @@ import org.clematis.web.elearning.server.util.BCrypt;
 import org.clematis.web.elearning.shared.domain.EmailAddress;
 import org.clematis.web.elearning.shared.domain.User;
 
-import com.gwtplatform.dispatch.server.ExecutionContext;
-import com.gwtplatform.dispatch.server.actionhandler.ActionHandler;
+import com.gwtplatform.dispatch.rpc.server.ExecutionContext;
+import com.gwtplatform.dispatch.rpc.server.actionhandler.ActionHandler;
 import com.gwtplatform.dispatch.shared.ActionException;
 
 public class RegisterHandler extends BasicHandler implements ActionHandler<RegisterAction, RegisterResult>  {

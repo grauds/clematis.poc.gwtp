@@ -22,15 +22,16 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Anchor;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.HorizontalPanel;
+import com.google.gwt.user.client.ui.IsWidget;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.PopupPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.inject.Inject;
-import com.gwtplatform.dispatch.shared.DispatchAsync;
+import com.gwtplatform.dispatch.rpc.shared.DispatchAsync;
 import com.gwtplatform.mvp.client.ViewImpl;
 import com.gwtplatform.mvp.client.proxy.PlaceManager;
-import com.gwtplatform.mvp.client.proxy.PlaceRequest;
+import com.gwtplatform.mvp.shared.proxy.PlaceRequest;
 
 
 public class GeneralPageView extends ViewImpl implements GeneralPageViewInterface {
@@ -159,7 +160,7 @@ public class GeneralPageView extends ViewImpl implements GeneralPageViewInterfac
 	}
 
 	@Override
-	public void setInSlot(Object slot, Widget content) {
+	public void setInSlot(Object slot, IsWidget content) {
 		if (slot == GeneralPagePresenter.TYPE_GeneralContent) {
 			panel.clear();
 			panel.add(content);
@@ -184,7 +185,7 @@ public class GeneralPageView extends ViewImpl implements GeneralPageViewInterfac
 	@Override
 	public void showErrorMessage(ShowErrorMessageEvent event) {
 		if ( event != null ) {
-			errorbanner.setText(event.getErrorMessage() + " " + event.getExceptionDetails() != null ? event.getExceptionDetails().getMessage() : "");
+			errorbanner.setText(event.getExceptionDetails().getMessage());
 		} else {
 			errorbanner.setText("Неизвестная ошибка");
 		}
@@ -236,8 +237,7 @@ public class GeneralPageView extends ViewImpl implements GeneralPageViewInterfac
 				ELP.getConnectionState().isRemembered = loginPopupWidget.getRemember().getValue();
 				// Check if we are inside the registration process:
 				PlaceRequest placeToFollow = SingnedInGatekeeper.getRestoredOrDecodedUrl(result.getSavedNextPage(), placeManager.getCurrentPlaceRequest());
-				if (ELP.getConnectionState().user != null && placeToFollow != null && 
-											(  NameTokens.REGISTER.equals(placeToFollow.getNameToken()) )
+				if (ELP.getConnectionState().user != null && NameTokens.REGISTER.equals(placeToFollow.getNameToken())
 											) {
 					// Yes, we are inside the registration process. Follow requested address
 					placeManager.revealPlace(placeToFollow);

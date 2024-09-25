@@ -7,9 +7,9 @@ import com.google.inject.Singleton;
 import com.gwtplatform.dispatch.shared.SecurityCookie;
 import com.gwtplatform.mvp.client.RootPresenter;
 import com.gwtplatform.mvp.client.gin.AbstractPresenterModule;
-import com.gwtplatform.mvp.client.proxy.ParameterTokenFormatter;
+import com.gwtplatform.mvp.shared.proxy.ParameterTokenFormatter;
 import com.gwtplatform.mvp.client.proxy.PlaceManager;
-import com.gwtplatform.mvp.client.proxy.TokenFormatter;
+import com.gwtplatform.mvp.shared.proxy.TokenFormatter;
 
 import org.clematis.web.elearning.client.courses.CoursesPresenter;
 import org.clematis.web.elearning.client.courses.CoursesView;

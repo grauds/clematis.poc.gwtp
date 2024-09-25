@@ -8,7 +8,7 @@ import org.clematis.web.elearning.client.classes.ClassTreeNodeWidget;
 import org.clematis.web.elearning.client.general.ShowErrorMessageEvent;
 import org.clematis.web.elearning.shared.domain.StudentsClass;
 
-import com.gwtplatform.dispatch.shared.DispatchAsync;
+import com.gwtplatform.dispatch.rpc.shared.DispatchAsync;
 import com.gwtplatform.mvp.client.ViewImpl;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.shared.EventBus;

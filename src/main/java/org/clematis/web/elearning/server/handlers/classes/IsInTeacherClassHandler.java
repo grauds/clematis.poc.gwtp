@@ -9,8 +9,8 @@ import org.clematis.web.elearning.client.students.classes.IsInTeacherClassAction
 import org.clematis.web.elearning.client.students.classes.IsInTeacherClassResult;
 import org.clematis.web.elearning.server.BasicHandler;
 
-import com.gwtplatform.dispatch.server.ExecutionContext;
-import com.gwtplatform.dispatch.server.actionhandler.ActionHandler;
+import com.gwtplatform.dispatch.rpc.server.ExecutionContext;
+import com.gwtplatform.dispatch.rpc.server.actionhandler.ActionHandler;
 import com.gwtplatform.dispatch.shared.ActionException;
 
 public class IsInTeacherClassHandler extends BasicHandler implements ActionHandler<IsInTeacherClassAction, IsInTeacherClassResult> {

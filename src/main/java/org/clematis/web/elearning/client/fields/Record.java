@@ -5,8 +5,6 @@ import java.util.HashMap;
 import java.util.Map.Entry;
 import java.util.Set;
 
-import com.google.gwt.user.client.rpc.IsSerializable;
-
 /**
  * This class represents a record shown in
  * a filtered table. The record might be a transaction from
@@ -14,7 +12,7 @@ import com.google.gwt.user.client.rpc.IsSerializable;
  * @author vlakadm
  *
  */
-public class Record implements IsSerializable  {
+public class Record {
 	/**
 	 * String representation of Key<?> of the current record.
 	 */

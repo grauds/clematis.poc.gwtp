@@ -10,8 +10,8 @@ import org.clematis.web.elearning.server.BasicHandler;
 import org.clematis.web.elearning.shared.domain.Event;
 import org.clematis.web.elearning.shared.domain.StudentsClass;
 
-import com.gwtplatform.dispatch.server.ExecutionContext;
-import com.gwtplatform.dispatch.server.actionhandler.ActionHandler;
+import com.gwtplatform.dispatch.rpc.server.ExecutionContext;
+import com.gwtplatform.dispatch.rpc.server.actionhandler.ActionHandler;
 import com.gwtplatform.dispatch.shared.ActionException;
 
 public class EditEventHandler extends BasicHandler implements ActionHandler<EditEventAction,EditEventResult> {

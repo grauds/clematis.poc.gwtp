@@ -33,11 +33,11 @@ import com.google.gwt.user.client.ui.PopupPanel;
 import com.google.gwt.user.client.ui.ScrollPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.Widget;
-import com.gwtplatform.dispatch.shared.DispatchAsync;
+import com.gwtplatform.dispatch.rpc.shared.DispatchAsync;
 
 public class ScheduleWidget extends Composite {
 
-	private static ScheduleWidgetUiBinder uiBinder = GWT
+	private static final ScheduleWidgetUiBinder uiBinder = GWT
 			.create(ScheduleWidgetUiBinder.class);
 
 	interface ScheduleWidgetUiBinder extends UiBinder<Widget, ScheduleWidget> {

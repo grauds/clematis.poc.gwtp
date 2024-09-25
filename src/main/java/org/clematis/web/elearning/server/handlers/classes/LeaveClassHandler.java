@@ -8,8 +8,8 @@ import org.clematis.web.elearning.client.students.classes.LeaveClassAction;
 import org.clematis.web.elearning.client.students.classes.LeaveClassResult;
 import org.clematis.web.elearning.server.BasicHandler;
 
-import com.gwtplatform.dispatch.server.ExecutionContext;
-import com.gwtplatform.dispatch.server.actionhandler.ActionHandler;
+import com.gwtplatform.dispatch.rpc.server.ExecutionContext;
+import com.gwtplatform.dispatch.rpc.server.actionhandler.ActionHandler;
 import com.gwtplatform.dispatch.shared.ActionException;
 
 public class LeaveClassHandler  extends BasicHandler implements ActionHandler<LeaveClassAction, LeaveClassResult> {

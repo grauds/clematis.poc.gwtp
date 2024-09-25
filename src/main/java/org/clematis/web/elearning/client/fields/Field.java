@@ -2,10 +2,7 @@ package org.clematis.web.elearning.client.fields;
 
 import java.io.Serializable;
 
-import com.google.gwt.user.client.rpc.IsSerializable;
-
-
-public class Field implements IsSerializable, Serializable {
+public class Field implements Serializable {
 	private static final long serialVersionUID = -671766218436717476L;
 	public static final String tagFields = "fields";
 	public static enum Type {
