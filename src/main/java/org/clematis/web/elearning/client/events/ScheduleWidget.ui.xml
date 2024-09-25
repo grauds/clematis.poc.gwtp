@@ -1,0 +1,134 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	
+<ui:style field="general" src="../general/general.css" />    
+<ui:with field='res' type='org.clematis.web.elearning.client.resources.Resources' />
+	
+	<ui:style type="org.clematis.web.elearning.client.events.ScheduleWidget.ScheduleWidgetStyle">
+       .buttonsPanel
+       {
+            margin: 10px;	
+	   }
+	   
+	   .switcherButton
+		{
+		    border: 0px; 
+		    background: transparent none;	
+	        height: 29px;
+		    padding: 0px 8px 0px 8px;
+		    margin-top: 12px;
+			font-family: arial, helvetica, sans-serif;
+		    font-size: 14px;
+			color: black;
+			width: 100%;	  
+			cursor: pointer;  
+		}
+		
+		.cw-FlexTable td {
+			  margin: 3px;
+			  vertical-align: top;
+		}
+		
+		.cell {
+             margin: 3px;	
+	         width: 70px;
+	         height: 30px;
+	         border: 1px solid #d0d0d0;
+	    }
+	    
+	    .today_cell {
+             margin: 3px;	
+	         width: 70px;
+	         height: 30px;
+	         border: 1px solid red;
+	    }
+	    
+	    .today_cell_note {
+             margin: 3px;	
+	         width: 70px;
+	         height: 30px;
+	         border: 1px solid red;
+	         cursor: hand;
+	         cursor: pointer;
+	    }
+	    
+	    .header {
+             margin-left: 4px;	
+             margin-right: 4px;
+	         width: 70px;
+	         height: 20px;
+	    }
+	    
+	    .start_cell {
+             margin-left: 4px;	
+             margin-right: 4px;
+	         width: 30px;
+	         height: 20px;
+	    }
+	    
+	    .cell_editable {
+	  
+			cursor: pointer; 
+			cursor: hand; 
+	
+	    }
+	    
+	    .cell_selected {
+
+			background: green;	
+				
+	    }
+	    
+	    .cell_not_selected {
+
+			background: white;	
+				
+	    }
+	    
+	    .note {
+            font-family: arial, helvetica, sans-serif;
+		    font-size: 14px;
+		    font-style: italic;
+		    padding-bottom: 8px;
+	    }
+	    
+	    
+	   
+	</ui:style>
+		
+	  <g:VerticalPanel width="100%">
+        <g:cell>
+           <g:Label styleName="{style.note}" text="Время занятий указано по серверному часовому поясу"/>
+        </g:cell>
+	    <g:cell>
+	        <g:FlexTable ui:field="header" width="550px" styleName="{style.cw-FlexTable}"/>
+	    </g:cell>
+	    <g:cell>
+		    <g:HorizontalPanel width="100%">		   		   
+			   <g:cell>
+			       <g:ScrollPanel height="500px" width="620px" ui:field="scrollPanel" ><g:FlexTable ui:field="panel" width="470px" styleName="{style.cw-FlexTable}"/></g:ScrollPanel>
+			   </g:cell>		
+			   <g:cell>
+			       <g:VerticalPanel>
+			          <g:cell>
+			              <g:HorizontalPanel spacing="10" width="100%">
+						    <g:cell horizontalAlignment="ALIGN_RIGHT">
+						        <g:Button ui:field="buttonScrollDay" styleName="bluebutton {general.loginbutton} hangbottom">Выровнять по дневному времени</g:Button>
+						    </g:cell>								
+						</g:HorizontalPanel>
+			          </g:cell>
+			          <g:cell>
+			             <g:VerticalPanel width="100%" ui:field="specialSymbols" />
+			          </g:cell>
+			          <g:cell>
+			             <g:VerticalPanel width="100%" ui:field="classesColors" />
+			          </g:cell>
+			       </g:VerticalPanel>			       
+			   </g:cell>   		   
+		    </g:HorizontalPanel>
+	    </g:cell>  
+	  </g:VerticalPanel>	
+		 
+
+</ui:UiBinder> 

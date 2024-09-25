@@ -1,0 +1,37 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:m="urn:import:org.clematis.web.elearning.client.general"
+	xmlns:r="urn:import:org.clematis.web.elearning.client.classes">
+	
+	<ui:style field="general" src="../general/general.css" />  
+<ui:with field='res' type='org.clematis.web.elearning.client.resources.Resources' />
+	<ui:style>
+		.holder {
+	       padding: 5px;
+	    }
+	    
+	    .bulb {
+		    display: block;
+		    left: 9px;
+		    position: relative;
+		    top: -12px;
+		    float: right;
+		}
+		
+		.hintbox div {
+        	margin-left: 5px;
+	    }
+	</ui:style>
+	<g:HorizontalPanel width="600px">
+	   <g:cell>
+	      <g:ScrollPanel  height="400px" width="500px">
+	         <g:VerticalPanel styleName="{style.holder}"  ui:field="classSelector"/>
+	      </g:ScrollPanel>
+	   </g:cell>
+	   <g:cell>
+	       <m:HintWidget ui:field="hintWidget" styleName="{style.hintbox}" title="Выберите класс" body="" />
+	   </g:cell>	   
+	</g:HorizontalPanel>
+
+</ui:UiBinder> 

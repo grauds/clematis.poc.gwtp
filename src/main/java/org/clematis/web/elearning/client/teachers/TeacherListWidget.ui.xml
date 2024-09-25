@@ -1,0 +1,86 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:r="urn:import:org.clematis.web.elearning.client.events"
+	xmlns:b="urn:import:org.clematis.web.elearning.client.ui.input">
+	
+   <ui:style field="general" src="../login/general.css" />   	
+   <ui:with field='res' type='org.clematis.web.elearning.client.resources.Resources' />
+   
+	<ui:style>
+	
+	.info {	
+	   margin: 5px;
+       border: 0px;
+	}
+	
+	.skypeImage {
+	   float: right;
+	   cursor: hand;
+	   cursor: pointer;
+	   margin: 10px;
+	}
+	
+	.module-number {
+	   color: #CC7C0F;
+	   display: inline;
+	   float: left;
+	   font-family: arial;
+	   font-size: 28px;
+	   line-height: 41px;
+	   margin-right: 10px;
+	}
+	
+	.infobox {
+		background-color: whiteSmoke;
+	    border: 1px solid #E5E5E5;
+	    margin-left: 10px;
+	    padding: 25px;
+	    text-align: left;
+	    width: 97%;
+	}
+		
+	</ui:style>
+	
+	<g:TabLayoutPanel barHeight="50" height="400px" width="100%">
+	   <g:tab>
+	        <g:header size='7'>Информация</g:header>
+                <g:HorizontalPanel  styleName="{style.info}">
+                   <g:cell>
+                     
+                     <g:VerticalPanel width="100%">
+                         <g:cell>
+		                     <g:HTMLPanel>
+		                        <object width="560" height="315">
+		                           <param name="movie" value="http://www.youtube.com/v/--564vFIwzs?version=3&amp;hl=ru_RU"></param>
+		                           <param name="allowFullScreen" value="true"></param>
+		                           <param name="allowscriptaccess" value="always"></param>
+		                           <param name="wmode" value="opaque"></param> 
+		                           <embed src="http://www.youtube.com/v/--564vFIwzs?version=3&amp;hl=ru_RU" wmode="opaque" type="application/x-shockwave-flash" width="560" height="315" allowscriptaccess="always" allowfullscreen="true">
+		                           </embed>
+		                        </object>
+		                     </g:HTMLPanel>
+                          </g:cell>                     
+                       </g:VerticalPanel>	
+                       	                                          
+                   </g:cell>
+                   <g:cell  width="100%">
+                       <g:HTMLPanel width="100%">
+                           <g:Image styleName="{style.skypeImage}" resource="{res.skypeLogo}"/>
+                           <g:FlexTable styleName="{style.infobox} hangbottom" ui:field="info" />
+                       </g:HTMLPanel>
+                   </g:cell>     
+                </g:HorizontalPanel>
+	   </g:tab>
+	   <g:tab>
+	        <g:header size='7'>Расписание</g:header>
+            <g:ScrollPanel><r:ScheduleWidget ui:field="scheduleWidget" /></g:ScrollPanel> 
+	   </g:tab>
+	   <g:tab>
+	        <g:header size='7'>Программы</g:header>
+	        <g:ScrollPanel><g:VerticalPanel ui:field="teacherCourses"/></g:ScrollPanel>
+	        					
+	   </g:tab>
+	</g:TabLayoutPanel>
+	
+</ui:UiBinder> 

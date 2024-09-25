@@ -1,0 +1,119 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:b="urn:import:org.clematis.web.elearning.client.ui.input"
+	xmlns:m="urn:import:org.clematis.web.elearning.client.general"
+	ui:generateFormat="com.google.gwt.i18n.rebind.format.PropertiesFormat"
+    ui:generateLocales="default">
+    
+<ui:style field="general" src="general.css" />    
+<ui:with field='res' type='org.clematis.web.elearning.client.resources.Resources' />
+
+<ui:style>
+
+.module-number {
+    color: #CC7C0F;
+    display: inline;
+    float: left;
+    font-family: arial;
+    font-size: 48px;
+    line-height: 41px;
+    width: 40px;
+}
+
+.youTube {
+    background: url("//s.ytimg.com/yt/imgbin/www-refresh-vflk40U3E.png") no-repeat scroll 0 -280px transparent;
+    display: block;
+    height: 40px;
+    width: 100px;
+}
+
+
+
+
+</ui:style>
+
+<g:HTMLPanel ui:field="panelContainer">
+	<g:HTMLPanel ui:field="panelMain">
+		<table>
+			<tr>
+				<td style="vertical-align: top; text-align: left; width: 530px; padding-left: 40px; padding-top: 10px;">
+					<iframe width="500" height="380" frameborder="0" scrolling="no" marginheight="5" marginwidth="0" src="nivo.html" style="color:#0000FF;text-align:left"/>
+					<ul style="list-style-type: none; margin-top:26px;">
+						<li class="{general.list}">
+							<span class="{style.module-number}">1</span>						
+								<p class="{general.listHeader}">Преподавание в видео-классах</p>
+								<p class="{general.listText}">
+									Собственный видео-компонент на основе Adobe Media Server &copy; позволяет преподавать в классах до 10 человек,
+									обеспечивает высокое качество видео и аудио трансляции. В видео-классах также проводятся семинары и тестирование.
+									<br />
+								</p>
+						</li>
+						<li class="{general.list}">
+							<span class="{style.module-number}">2</span>						
+								<p class="{general.listHeader}">Только высококлассные преподаватели</p>
+								<p class="{general.listText}">
+									Наши преподаватели имеют сертификаты и дипломы, подтверждающие их высочайший уровень
+									квалификации. Каждый преподаватель записывает ролик о себе и выкладывает его на наш канал в YouTube.
+									Вы можете ознакомиться со стилем преподавания заранее, перед тем как выбрать преподавателя.
+								</p>
+						</li>
+						<li class="{general.list}">
+							<span class="{style.module-number}">3</span>
+						     <p class="{general.listHeader}">Контроль учебного процесса</p>
+						     <p class="{general.listText}">
+						        Осуществляется с помощью тестов, оценок и автоматического отслеживания учебной траектории каждого студента. Индивидуальный подход,
+						        благожелательность и внимание к проблемным областям знаний.
+							 </p>
+							
+						</li>
+					</ul>			
+				    <!-- h2 class="text">Демонстрационное видео:</h2>
+					<iframe width="420" height="315" src="http://www.youtube.com/embed/0IDTT4GfqrA" frameborder="0"></iframe-->
+				</td>
+				<td>
+				   <table width="100%" cellspacing="10">
+				     <tr>
+				        <td>
+					        <div class="{general.greybox} hangbottom">
+						        <div class="{style.youTube}"/>
+								<p class="{general.boxtop}">Канал "Онлайн Школы"</p>
+								<p class="{general.listText}">Ролики презентаций, скринкасты, 
+								видео преподавателей и архивы лекций. Подпишитесь сегодня!
+								</p>
+								<g:HorizontalPanel spacing="10" width="100%">
+								    <g:cell horizontalAlignment="ALIGN_RIGHT">
+								        <g:Button ui:field="buttonLogin" styleName="bluebutton {general.loginbutton} hangbottom">Посетить</g:Button>
+								    </g:cell>								
+								</g:HorizontalPanel>							
+	  				       </div>
+				        </td>
+				     </tr>
+				     <tr>						     
+						<td>
+						    <m:HintWidget title="Демонстрационнное видео" body="Посмотрите демонстрационное видео, если вы испытываете трудности с навигацией по сайту,
+								регистрацией и другими действиями. В случае, если вопросы остаются, напишите в службу поддержки." />
+						</td>
+				     </tr>
+				      <tr>
+				        <td>
+					        <div class="{general.greybox} hangbottom">
+								<p class="{general.boxtop}">Наш офис</p>
+								<p class="{general.listText}">
+								<iframe width="275" height="275" frameborder="0" scrolling="no" marginheight="5" marginwidth="0" src="http://maps.google.ru/maps?f=q&amp;source=s_q&amp;hl=ru&amp;geocode=&amp;q=%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+%D0%9A%D0%BE%D1%80%D0%BE%D0%BB%D0%B5%D0%B2,+%D1%83%D0%BB%D0%B8%D1%86%D0%B0+%D0%9E%D1%80%D0%B4%D0%B6%D0%BE%D0%BD%D0%B8%D0%BA%D0%B8%D0%B4%D0%B7%D0%B5&amp;aq=0&amp;oq=%D0%9A%D0%BE%D1%80%D0%BE%D0%BB%D0%B5%D0%B2+%D0%9E%D1%80%D0%B4%D0%B6%D0%BE%D0%BD%D0%B8&amp;sll=55.902939,37.855539&amp;sspn=0.033152,0.09347&amp;ie=UTF8&amp;hq=&amp;hnear=%D1%83%D0%BB.+%D0%9E%D1%80%D0%B4%D0%B6%D0%BE%D0%BD%D0%B8%D0%BA%D0%B8%D0%B4%D0%B7%D0%B5,+%D0%9A%D0%BE%D1%80%D0%BE%D0%BB%D0%B5%D0%B2&amp;t=m&amp;ll=55.905538,37.850561&amp;spn=0.014434,0.025749&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="http://maps.google.ru/maps?f=q&amp;source=embed&amp;hl=ru&amp;geocode=&amp;q=%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+%D0%9A%D0%BE%D1%80%D0%BE%D0%BB%D0%B5%D0%B2,+%D1%83%D0%BB%D0%B8%D1%86%D0%B0+%D0%9E%D1%80%D0%B4%D0%B6%D0%BE%D0%BD%D0%B8%D0%BA%D0%B8%D0%B4%D0%B7%D0%B5&amp;aq=0&amp;oq=%D0%9A%D0%BE%D1%80%D0%BE%D0%BB%D0%B5%D0%B2+%D0%9E%D1%80%D0%B4%D0%B6%D0%BE%D0%BD%D0%B8&amp;sll=55.902939,37.855539&amp;sspn=0.033152,0.09347&amp;ie=UTF8&amp;hq=&amp;hnear=%D1%83%D0%BB.+%D0%9E%D1%80%D0%B4%D0%B6%D0%BE%D0%BD%D0%B8%D0%BA%D0%B8%D0%B4%D0%B7%D0%B5,+%D0%9A%D0%BE%D1%80%D0%BE%D0%BB%D0%B5%D0%B2&amp;t=m&amp;ll=55.905538,37.850561&amp;spn=0.014434,0.025749&amp;z=14&amp;iwloc=A" style="color:#0000FF;text-align:left">Просмотреть увеличенную карту</a></small>
+								</p>
+								<p class="{general.listText}">Россия, г Королев, ул Дзержинского 20</p>
+                                <p class="{general.listText}">Телефон: +7(926) 281 55 94</p>																
+	  				       </div>
+				        </td>
+				     </tr>
+				   </table>
+					
+				</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+	
+</g:HTMLPanel>
+
+</ui:UiBinder>

@@ -1,0 +1,66 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:r="urn:import:org.clematis.web.elearning.client.events"
+	xmlns:b="urn:import:org.clematis.web.elearning.client.ui.input">
+	
+   <ui:style field="general" src="../../login/general.css" />   	
+   <ui:with field='res' type='org.clematis.web.elearning.client.resources.Resources' />
+   
+	<ui:style>
+	
+	.info {	
+	   margin: 5px;
+       border: 0px;
+	}
+	
+	.skypeImage {
+	   float: right;
+	   cursor: hand;
+	   cursor: pointer;
+	   margin: 10px;
+	}
+	
+	.module-number {
+	   color: #CC7C0F;
+	   display: inline;
+	   float: left;
+	   font-family: arial;
+	   font-size: 28px;
+	   line-height: 41px;
+	   margin-right: 10px;
+	}
+	
+	.infobox {
+		background-color: whiteSmoke;
+	    border: 1px solid #E5E5E5;
+	    margin-left: 10px;
+	    padding: 25px;
+	    text-align: left;
+	    width: 97%;
+	}
+	
+	
+	.image {
+	    float:center; 
+	    margin: 20px; 	
+	    cursor: pointer;
+	    cursor: hand;
+	}
+		
+	</ui:style>
+
+	<g:HTMLPanel>
+		<g:HTMLPanel ui:field="messagePanel">
+	       <p class="{general.listText}">
+				<g:Image styleName="{style.image}" resource="{res.loader}"/>
+			</p>
+	       <p class="{general.listHeader}">
+				Загружаем расписание...
+			</p>
+	    </g:HTMLPanel>
+	    <r:ScheduleWidget ui:field="scheduleWidget" />
+	</g:HTMLPanel>
+	
+</ui:UiBinder>

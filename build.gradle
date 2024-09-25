@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+    id "de.esoco.gwt" version "1.2.0"
+}
+
+group = 'org.clematis.elearning'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.gwtplatform:gwtp:1.6'
+
+}
+
+test {
+    minHeapSize = "512m" // initial heap size
+    maxHeapSize = "4096m" // maximum heap size
+    useJUnitPlatform()
+}

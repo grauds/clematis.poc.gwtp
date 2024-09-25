@@ -1,0 +1,35 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	
+    
+<ui:style field="general" src="general.css" />    
+<ui:with field='res' type='org.clematis.web.elearning.client.resources.Resources' />
+	
+	<ui:style>
+		.bulb {
+		    display: block;
+		    left: 9px;
+		    position: relative;
+		    top: -12px;
+		    float: right;
+		}		
+		
+		.hintbox {
+			vertical-align: top;
+			padding: 25px;
+	        margin-left: 65px;
+			width: 280px;
+			border: 1px solid #E5E5E5;
+			text-align: left;
+			background-color: #FFF0AA;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+			<div class="{style.hintbox} hangbottom topinfo">
+		    <g:Image resource="{res.bulb}" styleName="{style.bulb}"/>
+            <g:Label styleName="{general.boxtop}" ui:field="title"/>
+			<g:Label styleName="{general.listText}" ui:field="body"/>						
+		   </div>
+	</g:HTMLPanel>
+</ui:UiBinder> 

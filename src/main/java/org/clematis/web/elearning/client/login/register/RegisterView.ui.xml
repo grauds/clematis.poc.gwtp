@@ -1,0 +1,104 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:b="urn:import:org.clematis.web.elearning.client.ui.input"
+	ui:generateFormat="com.google.gwt.i18n.rebind.format.PropertiesFormat"
+    ui:generateLocales="default">
+    
+<ui:style field="general" src="../general.css" />    
+<ui:with field='res' type='org.clematis.web.elearning.client.resources.Resources' />
+
+<ui:style>
+
+.module-number {
+    color: #CC7C0F;
+    display: inline;
+    float: left;
+    font-family: arial;
+    font-size: 48px;
+    line-height: 41px;
+    width: 40px;
+}
+
+.image {
+    float:center; 
+    margin: 20px; 	
+    cursor: pointer;
+    cursor: hand;
+}
+
+</ui:style>
+
+<g:HTMLPanel ui:field="panelContainer">
+	<g:HTMLPanel ui:field="panelMain">
+		<table>
+			<tr>
+				<td style="vertical-align: top;">
+					<ui:msg key="BudgetingService">
+					<h1 class="text">Зарегистрируйтесь в качестве студента и получите тестовый период обучения:</h1>
+				</ui:msg>
+				<ul style="list-style-type: none; margin-top:26px;">
+					<li class="{general.list}">
+						<span class="{style.module-number}">1</span>
+							<p class="{general.listHeader}">Проверьте ваше оборудование</p>
+							<p class="{general.listText}">
+								Для использования сайта необходимо иметь микрофон и устройство воспроизведения аудио - динамики или наушники.
+								Нажмите на картинку с изображением наушников, чтобы протестировать свое оборудование.
+							</p>
+							<p class="{general.listText}">
+								<g:Image styleName="{style.image}" resource="{res.headset}"/>
+							</p>	 
+					</li>
+					<li class="{general.list}">
+						<span class="{style.module-number}">2</span>						
+							<p class="{general.listHeader}">Заполните анкету</p>
+							<p class="{general.listText}">
+							  Все поля анкеты обязательны. В случае возникновения вопросов или затруднений со входом на сайт, обращайтесь в службу поддержки по телефону или email. 
+							  <div style="width: 400px; padding: 20px; margin-left: 100px;">
+								   <g:HTMLPanel ui:field="registerPanel" >
+									   <b:MailInput ui:field="inputMail" captionOnLeft="true" required="true" caption="E-Mail" styleName="hangbottom" width="250px"/>
+									   <b:Input ui:field="inputName" captionOnLeft="true" required="true" caption="Имя" styleName="hangbottom" width="250px"/>
+							           <b:Input ui:field="inputSecondName" captionOnLeft="true"  required="true" caption="Фамилия" styleName="hangbottom" width="250px"/>
+							           <b:Input ui:field="inputPhone" captionOnLeft="true" required="true" caption="Телефон" styleName="hangbottom" width="250px"/>
+							           <b:PasswordInput ui:field="inputPassword" captionOnLeft="true" required="true"  caption="Пароль" styleName="hangbottom" width="250px"/>
+							           <b:PasswordInput ui:field="confirmPassword" captionOnLeft="true" required="true" caption="Подтвердите пароль" styleName="hangbottom" width="250px"/>
+							           <g:HorizontalPanel spacing="10" width="400px">
+							               <g:cell horizontalAlignment="right">
+							                    <g:Button ui:field="submitRegistration" styleName="bluebutton" text="Зарегистрироваться"/>
+							               </g:cell>
+							           </g:HorizontalPanel>					           
+								   </g:HTMLPanel>
+								   <g:HTMLPanel ui:field="messagePanel">
+								       <p class="{general.listText}">
+											<g:Image styleName="{style.image}" resource="{res.loader}"/>
+										</p>
+								       <p class="{general.listHeader}">
+											Идет процесс регистрации...
+										</p>
+								   </g:HTMLPanel>
+								   <g:HTMLPanel ui:field="finalPanel">
+										<div class="{general.greybox} hangbottom">
+												<p class="{general.boxtop}">Регистрация успешна!</p>
+												<p class="{general.listText}">Вам отправлено письмо с кодом активации учетной записи. 
+												После активации вы сможете авторизоваться и посетить свой кабинет, выбрать 
+												преподавателя с удобным расписанием и начать обучение.
+												</p>
+												<g:HorizontalPanel spacing="10" width="100%">
+												    <g:cell horizontalAlignment="ALIGN_RIGHT">
+												        <g:Button ui:field="cabinetButton" styleName="bluebutton {general.loginbutton} hangbottom">Перейти в кабинет</g:Button>
+												    </g:cell>								
+												</g:HorizontalPanel>							
+									   </div>
+								   </g:HTMLPanel>
+							  </div>
+							</p>
+					</li>
+				</ul>
+				</td>
+			</tr>
+		</table>	
+	</g:HTMLPanel>
+
+</g:HTMLPanel>
+
+</ui:UiBinder>

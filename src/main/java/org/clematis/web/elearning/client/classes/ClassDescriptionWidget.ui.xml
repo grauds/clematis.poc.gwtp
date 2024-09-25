@@ -1,0 +1,22 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.descriptionPanel{
+           margin: 20px;	
+	    } 
+	    
+	    .infobox {
+			background-color: whiteSmoke;
+		    border: 1px solid #E5E5E5;
+		    margin-left: 10px;
+		    padding: 25px;
+            width: 300px;
+		    text-align: left;
+		}
+		
+	</ui:style>
+	<g:HTMLPanel ui:field="descriptionPanel">
+	     <g:FlexTable styleName="{style.infobox} hangbottom" ui:field="info" />
+	</g:HTMLPanel>
+</ui:UiBinder> 

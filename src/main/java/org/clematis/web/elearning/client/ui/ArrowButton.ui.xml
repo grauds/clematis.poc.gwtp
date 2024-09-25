@@ -1,0 +1,47 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder  xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+
+		.button {
+		    display: table-cell;
+		    text-align: center;
+		    vertical-align: middle;
+		    margin: 0px;
+		    width: 27px;
+		    height: 27px;
+		    cursor: hand;
+		    cursor: pointer;
+		}
+		
+		.button * {
+		    vertical-align: middle;
+		}
+		
+		.text {
+		    display: table-cell;
+		    text-align: center;
+		    vertical-align: bottom;
+		    padding: 2px;
+		    margin: 0px;
+		    cursor: hand;
+		    cursor: pointer;
+    
+		}
+		
+		.label {
+	        margin: 0px;
+			font-family: arial, helvetica, sans-serif;
+			font-size: 14px;		        
+	    }
+	
+	</ui:style>
+	
+	  <g:FocusPanel  ui:field="panel">
+	   <g:HTMLPanel>
+		   <span class="{style.text}" ><g:Label styleName="{style.label}" ui:field="text"></g:Label></span>
+		   <div class="{style.button}"><span></span><g:Image ui:field="image" /></div>
+	   </g:HTMLPanel>
+	  </g:FocusPanel>
+ 	
+</ui:UiBinder>

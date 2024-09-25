@@ -1,0 +1,30 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+
+	<ui:style field="general" src="../general/general.css" />    
+    <ui:with field='res' type='org.clematis.web.elearning.client.resources.Resources' />
+
+		<ui:style>
+		
+		.pin_holder {
+			border: 1px solid #E5E5E5;
+			cursor: hand;
+			cursor: pointer;
+			margin: 7px 10px;
+			width: 32px;
+			height: 32px;
+		}
+		
+		.pin {
+		    display: block;
+   left: 9px;
+    position: relative;
+    top: -12px;
+		}
+		
+	</ui:style>
+	<g:FocusPanel ui:field="pin" styleName="{style.pin_holder}">
+	   <g:Image ui:field="pin_image" resource="{res.pin_blue}" styleName="{style.pin}"/>
+	</g:FocusPanel>
+</ui:UiBinder> 

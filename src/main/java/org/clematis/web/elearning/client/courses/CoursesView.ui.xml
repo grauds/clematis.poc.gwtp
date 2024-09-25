@@ -1,0 +1,112 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:b="urn:import:org.clematis.web.elearning.client.ui.input"
+	ui:generateFormat="com.google.gwt.i18n.rebind.format.PropertiesFormat"
+	xmlns:t="urn:import:org.clematis.web.elearning.client.teachers"
+	xmlns:m="urn:import:org.clematis.web.elearning.client.general"
+    ui:generateLocales="default">
+    
+<ui:style field="general" src="../general/general.css" />    
+<ui:with field='res' type='org.clematis.web.elearning.client.resources.Resources' />
+
+<ui:style>
+
+.module-number {
+    color: #CC7C0F;
+    display: inline;
+    float: left;
+    font-family: arial;
+    font-size: 28px;
+    line-height: 41px;
+    margin-right: 10px;
+}
+
+.youTube {
+    background: url("//s.ytimg.com/yt/imgbin/www-refresh-vflk40U3E.png") no-repeat scroll 0 -280px transparent;
+    display: block;
+    height: 40px;
+    width: 100px;
+}
+
+.image {
+    float:center; 
+    margin: 20px; 	
+    cursor: pointer;
+    cursor: hand;
+}
+
+.bulb {
+    display: block;
+    left: 9px;
+    position: relative;
+    top: -12px;
+    float: right;
+}
+
+.topinfo {
+	margin-top: 20px;
+}
+
+</ui:style>
+
+<g:HTMLPanel ui:field="panelContainer">
+	<g:HTMLPanel ui:field="panelMain">
+		<table>
+			<tr>
+				<td  style="vertical-align: top; width: 530px;">
+				
+				   <g:VerticalPanel ui:field="coursesGroupsList" />
+				   <g:HTMLPanel ui:field="messagePanel">
+				       <p class="{general.listText}">
+							<g:Image styleName="{style.image}" resource="{res.loader}"/>
+						</p>
+				       <p class="{general.listHeader}">
+							Загружаем список курсов...
+						</p>
+				   </g:HTMLPanel>
+				</td>
+				<td tyle="vertical-align: top;">
+				<table width="100%" cellspacing="10">
+				     <tr>
+				        <td>
+							<div class="{general.greybox} hangbottom">
+							            <p class="{general.boxtop}">Индивидуальное обучение</p>
+										<p class="{general.listText}">Мы также готовы предоставить услуги индивидуального обучения по одной из вышеперечисленных программ или разработать специальную программу для Вас, которая будет соответствовать персональным запросам и потребностям.
+										</p>
+										<g:HorizontalPanel spacing="10" width="100%">
+										    <g:cell horizontalAlignment="ALIGN_RIGHT">
+										        <g:Button ui:field="buttonLogin" styleName="bluebutton {general.loginbutton} hangbottom">Подать заявку</g:Button>
+										    </g:cell>								
+										</g:HorizontalPanel>							
+			  				   </div>
+			            </td>
+				     </tr>
+				     <tr>
+				        <td>
+					        <m:HintWidget title="Поиск преподавателей" body="Отметьте интересующие вас программы в списке слева и 
+							вы автоматически получите список преподавателей, специализирующихся на отмеченных программах обучения." />
+				        </td>
+				     </tr>
+				   </table>
+				</td>
+			</tr>
+			<tr>
+			   <td colspan="2">
+			      <g:VerticalPanel width="100%" ui:field="teachersSearchResults"/>
+			      <g:HTMLPanel ui:field="searchMessagePanel">
+				       <p class="{general.listText}">
+							<g:Image styleName="{style.image}" resource="{res.loader}"/>
+						</p>
+				       <p class="{general.listHeader}">
+							Загружаем список преподавателей...
+						</p>
+				   </g:HTMLPanel>
+			   </td>
+			</tr>			
+		</table>
+	</g:HTMLPanel>
+	
+</g:HTMLPanel>
+
+</ui:UiBinder>
