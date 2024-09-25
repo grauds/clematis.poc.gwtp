@@ -11,7 +11,16 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.gwtplatform:gwtp:1.6'
+
+    implementation 'com.google.gwt.inject:gin:2.1.2'
+    implementation 'com.gwtplatform:gwtp-all:1.3.1'
+    implementation 'com.gwtplatform:gwtp-dispatch-shared:1.0.3'
+    implementation 'com.google.inject:guice:7.0.0'
+    implementation 'com.google.inject.extensions:guice-servlet:7.0.0'
+    implementation 'com.google.inject.extensions:guice-assistedinject:7.0.0'
+
+    implementation 'com.sun.mail:javax.mail:1.6.2'
+
 
 }
 
