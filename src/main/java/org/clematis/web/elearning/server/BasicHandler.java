@@ -146,13 +146,13 @@ public class BasicHandler {
 //            return null;
     	
 //    	String userName = "root";
-//        String password = "V7DJCdrj";
+//        String password = "****";
         String url = "jdbc:mysql://77.91.193.156:3306/elearning_prototype";
         Class.forName ("com.mysql.jdbc.Driver").newInstance ();
         
         Properties properties=new Properties();
         properties.setProperty("user","root");
-        properties.setProperty("password","V7DJCdrj");
+        properties.setProperty("password","****");
         properties.setProperty("useUnicode","true");
         properties.setProperty("characterEncoding","UTF-8");
         

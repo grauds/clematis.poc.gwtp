@@ -88,7 +88,7 @@ public class ImageDownloadServlet extends HttpServlet
 //      } else
 //          return null;
   	  String userName = "root";
-      String password = "V7DJCdrj";
+      String password = "****";
       String url = "jdbc:mysql://77.91.193.156:3306/elearning_prototype";
       Class.forName ("com.mysql.jdbc.Driver").newInstance ();
       return DriverManager.getConnection (url, userName, password);    

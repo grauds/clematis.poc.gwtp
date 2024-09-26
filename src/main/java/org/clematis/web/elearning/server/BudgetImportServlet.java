@@ -70,7 +70,7 @@ public class BudgetImportServlet extends HttpServlet {
         
         Properties properties=new Properties();
         properties.setProperty("user","root");
-        properties.setProperty("password","V7DJCdrj");
+        properties.setProperty("password","*****");
         properties.setProperty("useUnicode","true");
         properties.setProperty("characterEncoding","UTF-8");
         
