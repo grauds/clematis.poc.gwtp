@@ -5,7 +5,7 @@ This project is an effort to bring the old code back with the help of Groovy bui
 
 Luckily, the compiled web archive is available under /war folder in the root of the repository and it is runnable in Docker Tomcat 7 container:
 
-<img src="./images/prototype.png" alt="drawing" width="50%"/>
+<img src="./images/prototype.png" alt="drawing" width="70%"/>
 
 
 ## Quick Start
