@@ -7,7 +7,7 @@ import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import com.gwtplatform.mvp.client.proxy.Gatekeeper;
 import com.gwtplatform.mvp.client.proxy.PlaceManager;
-import com.gwtplatform.mvp.shared.proxy.PlaceRequest;
+import com.gwtplatform.mvp.client.proxy.PlaceRequest;
 
 @Singleton
 public class StudentGatekeeper implements Gatekeeper {

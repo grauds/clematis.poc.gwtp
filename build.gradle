@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+   // id 'checkstyle'
     id "de.esoco.gwt" version "1.2.0"
 }
 
@@ -15,20 +16,28 @@ repositories {
 
 dependencies {
 
-    annotationProcessor('com.gwtplatform:gwtp-all:1.3.1','com.google.gwt:gwt-user:2.8.2')
+    annotationProcessor('com.gwtplatform:gwtp-all:1.0','com.google.gwt:gwt-user:2.8.2')
 
-    implementation 'com.google.gwt.inject:gin:2.1.2'
-    implementation 'com.gwtplatform:gwtp-all:1.3.1'
+    implementation 'com.google.gwt.inject:gin:1.5.0'
+    implementation 'com.gwtplatform:gwtp-all:1.0'
 
-    implementation group: 'com.google.code', name: 'gwt-visualization', version: '1.1.1'
-    implementation 'com.google.inject:guice:4.2.1'
-    implementation 'com.google.inject.extensions:guice-servlet:4.2.1'
-    implementation 'com.google.inject.extensions:guice-assistedinject:4.2.1'
+    implementation 'com.google.code:gwt-visualization:1.1.1'
+    implementation 'com.google.inject:guice:3.0'
+    implementation 'com.google.inject.extensions:guice-servlet:3.0'
+    implementation 'com.google.inject.extensions:guice-assistedinject:3.0'
 
     implementation 'com.sun.mail:javax.mail:1.6.2'
     implementation 'commons-fileupload:commons-fileupload:1.5'
-    implementation group: 'org.apache.poi', name: 'poi', version: '3.17'
+    implementation 'org.apache.poi:poi:3.17'
 
+}
+
+java {
+    targetCompatibility = '1.8'
+}
+
+gwt {
+    module 'org.clematis.web.elearning.ELP'
 }
 
 sourceSets {
@@ -44,3 +53,9 @@ test {
     maxHeapSize = "4096m" // maximum heap size
     useJUnitPlatform()
 }
+
+// ------------ Checkstyle configuration  ---------
+/*checkstyle {
+    configProperties.configFile = file("${project.rootDir}/config/checkstyle/checkstyle.xml")
+    configProperties.checkstyleSuppressionFile = file("${project.rootDir}/config/checkstyle/suppressions.xml")
+}*/

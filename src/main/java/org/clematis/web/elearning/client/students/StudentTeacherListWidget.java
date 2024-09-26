@@ -40,7 +40,7 @@ import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.PopupPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.Widget;
-import com.gwtplatform.dispatch.rpc.shared.DispatchAsync;
+import com.gwtplatform.dispatch.shared.DispatchAsync;
 
 public class StudentTeacherListWidget extends Composite {
 
@@ -99,7 +99,7 @@ public class StudentTeacherListWidget extends Composite {
 			new GetAvailableClassesAction.Builder(
 				ELP.getConnectionState().user.getUser().getId()
 			).teacherId(teacher.getId()).build(),
-			new AsyncCallback<>() {
+			new AsyncCallback<GetAvailableClassesResult>() {
 
 			@Override
 			public void onFailure(Throwable caught) {
@@ -147,7 +147,7 @@ public class StudentTeacherListWidget extends Composite {
 		dispatcher.execute(new GetStudentClassesAction.Builder(
 				ELP.getConnectionState().user.getUser().getId()
 			).teacherId(teacher.getId()).build(),
-			new AsyncCallback<>() {
+			new AsyncCallback<GetStudentClassesResult>() {
 
 			@Override
 			public void onFailure(Throwable caught) {
@@ -239,7 +239,7 @@ public class StudentTeacherListWidget extends Composite {
 		dispatcher.execute(new GetAvailableClassesAction.Builder(
 				ELP.getConnectionState().user.getUser().getId()
 			).teacherId(teacher.getId()).build(),
-			new AsyncCallback<>() {
+			new AsyncCallback<GetAvailableClassesResult>() {
 
 			@Override
 			public void onFailure(Throwable caught) {

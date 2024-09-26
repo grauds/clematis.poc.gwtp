@@ -1,7 +1,6 @@
 package org.clematis.web.elearning.client.gin;
 
 import com.google.gwt.inject.client.GinModules;
-import com.gwtplatform.dispatch.client.gin.DispatchAsyncModule;
 
 import org.clematis.web.elearning.client.courses.CoursesPresenter;
 import org.clematis.web.elearning.client.general.GeneralPagePresenter;
@@ -31,7 +30,7 @@ import org.clematis.web.elearning.client.teachers.schedule.SchedulePresenter;
 import org.clematis.web.elearning.client.students.schedule.StudentSchedulePresenter;
 import org.clematis.web.elearning.client.students.budget.BudgetLinePresenter;
 
-@GinModules({ DispatchAsyncModule.class, ApplicationModule.class })
+@GinModules({ ApplicationModule.class, ApplicationModule.class })
 public interface ApplicationGinjector extends Ginjector {
 
 	EventBus getEventBus();

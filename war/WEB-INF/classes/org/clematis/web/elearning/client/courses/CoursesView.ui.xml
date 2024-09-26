@@ -1,0 +1,127 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:b="urn:import:org.clematis.web.elearning.client.ui.input"
+	ui:generateFormat="com.google.gwt.i18n.rebind.format.PropertiesFormat"
+	xmlns:t="urn:import:org.clematis.web.elearning.client.teachers"
+    ui:generateLocales="default">
+    
+<ui:style field="general" src="../general/general.css" />    
+<ui:with field='res' type='org.clematis.web.elearning.client.resources.Resources' />
+
+<ui:style>
+
+.module-number {
+    color: #CC7C0F;
+    display: inline;
+    float: left;
+    font-family: arial;
+    font-size: 28px;
+    line-height: 41px;
+    margin-right: 10px;
+}
+
+.youTube {
+    background: url("//s.ytimg.com/yt/imgbin/www-refresh-vflk40U3E.png") no-repeat scroll 0 -280px transparent;
+    display: block;
+    height: 40px;
+    width: 100px;
+}
+
+.image {
+    float:center; 
+    margin: 20px; 	
+    cursor: pointer;
+    cursor: hand;
+}
+
+.bulb {
+    display: block;
+    left: 9px;
+    position: relative;
+    top: -12px;
+    float: right;
+}
+
+.topinfo {
+	margin-top: 20px;
+}
+
+</ui:style>
+
+<g:HTMLPanel ui:field="panelContainer">
+	<g:HTMLPanel ui:field="panelMain">
+		<table>
+			<tr>
+				<td style="vertical-align: top;">
+					<h1 class="text">Предлагаемые программы обучения</h1>
+					<ul style="list-style-type: none; margin-top:26px;">
+						<li class="{general.list}">
+								<p class="{general.listText}">
+В нашей академии мы стремимся к всестороннему развитию всех языковых навыков. 
+В каждой программе уделяется особое внимание тренировке разговорной речи.
+Наша задача состоит в том, чтобы c каждым пройденным курсом студенты чувствовали себя увереннее в иностранной языковой среде и
+ чтобы их речь становилась более граммотной и беглой. Также большое внимание уделяется восприятию речи на слух, 
+ грамматике и нарабатыванию активного словарного запаса.
+В современном мире владение английским языком необходимо для получения хорошей работы, налаживания бизнес-контактов, 
+поступления в престижные ВУЗы. Изучайте язык с нами и мы поможем быть успешными!
+								</p>
+						</li>
+					</ul>
+				</td>
+				<td>
+				<div class="{general.greybox} hangbottom">
+				            <p class="{general.boxtop}">Индивидуальное обучение</p>
+							<p class="{general.listText}">Мы также готовы предоставить услуги индивидуального обучения по одной из вышеперечисленных программ или разработать специальную программу для Вас, которая будет соответствовать персональным запросам и потребностям.
+							</p>
+							<g:HorizontalPanel spacing="10" width="100%">
+							    <g:cell horizontalAlignment="ALIGN_RIGHT">
+							        <g:Button ui:field="buttonLogin" styleName="bluebutton {general.loginbutton} hangbottom">Подать заявку</g:Button>
+							    </g:cell>								
+							</g:HorizontalPanel>							
+  				   </div>
+				</td>
+			</tr>
+			<tr>
+				<td style="vertical-align: top;">
+				   <g:VerticalPanel ui:field="coursesGroupsList" />
+				   <g:HTMLPanel ui:field="messagePanel">
+				       <p class="{general.listText}">
+							<g:Image styleName="{style.image}" resource="{res.loader}"/>
+						</p>
+				       <p class="{general.listHeader}">
+							Загружаем список курсов...
+						</p>
+				   </g:HTMLPanel>
+				</td>
+				<td>
+					<div class="{general.hintbox} hangbottom topinfo">
+					    <g:Image resource="{res.bulb}" styleName="{style.bulb}"/>
+			            <p class="{general.boxtop}">Поиск преподавателей</p>
+						<p class="{general.listText}">Отметьте интересующие вас программы в списке слева и 
+						вы автоматически получите список преподавателей, специализирующихся на отмеченных программах обучения.
+						</p>						
+ 				   </div>
+				</td>
+			</tr>	
+			<tr>
+			   <td colspan="2">
+			     <h1 class="text">Выбранные преподаватели</h1>
+			      
+			      <g:VerticalPanel width="100%" ui:field="teachersSearchResults"/>
+			      <g:HTMLPanel ui:field="searchMessagePanel">
+				       <p class="{general.listText}">
+							<g:Image styleName="{style.image}" resource="{res.loader}"/>
+						</p>
+				       <p class="{general.listHeader}">
+							Загружаем список преподавателей...
+						</p>
+				   </g:HTMLPanel>
+			   </td>
+			</tr>			
+		</table>
+	</g:HTMLPanel>
+	
+</g:HTMLPanel>
+
+</ui:UiBinder>

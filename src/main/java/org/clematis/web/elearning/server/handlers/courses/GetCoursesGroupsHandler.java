@@ -12,8 +12,8 @@ import org.clematis.web.elearning.server.BasicHandler;
 import org.clematis.web.elearning.shared.domain.Course;
 import org.clematis.web.elearning.shared.domain.CoursesGroup;
 
-import com.gwtplatform.dispatch.rpc.server.ExecutionContext;
-import com.gwtplatform.dispatch.rpc.server.actionhandler.ActionHandler;
+import com.gwtplatform.dispatch.server.ExecutionContext;
+import com.gwtplatform.dispatch.server.actionhandler.ActionHandler;
 import com.gwtplatform.dispatch.shared.ActionException;
 
 public class GetCoursesGroupsHandler extends BasicHandler implements ActionHandler<GetCoursesGroupAction, GetCoursesGroupResult>  {

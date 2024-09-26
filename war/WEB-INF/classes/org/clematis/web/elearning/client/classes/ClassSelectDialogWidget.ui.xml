@@ -1,0 +1,40 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:r="urn:import:org.clematis.web.elearning.client.classes">
+	
+	<ui:style field="general" src="../general/general.css" />  
+<ui:with field='res' type='org.clematis.web.elearning.client.resources.Resources' />
+	<ui:style>
+		.holder {
+	       padding: 5px;
+	    }
+	    
+	    .bulb {
+		    display: block;
+		    left: 9px;
+		    position: relative;
+		    top: -12px;
+		    float: right;
+		}
+	</ui:style>
+	<g:HorizontalPanel>
+	   <g:cell>
+	      <g:ScrollPanel>
+	         <g:VerticalPanel styleName="{style.holder}"  ui:field="classSelector"/>
+	      </g:ScrollPanel>
+	   </g:cell>
+	   <g:cell>
+	      <g:HTMLPanel>
+	          <r:ClassDescriptionWidget ui:field="classDescription"/>
+	          <!-- div class="{general.hintbox} hangbottom topinfo">
+				    <g:Image resource="{res.bulb}" styleName="{style.bulb}"/>
+		            <p class="{general.boxtop}">Выбор класса</p>
+					<p class="{general.listText}">Отметьте класс, операцию с которым вы производите.
+					Справа должно появится описание класса и привязанный к нему курс.</p>						
+				   </div--> 
+	      </g:HTMLPanel>	      
+	   </g:cell>
+	</g:HorizontalPanel>
+
+</ui:UiBinder> 

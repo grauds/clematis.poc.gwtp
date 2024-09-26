@@ -1,0 +1,88 @@
+.topheader {
+	color: #222;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 16px;
+	margin-top: 6px;	
+}
+.greybox {
+	vertical-align: top;
+	padding: 25px;
+	margin-left: 65px;
+	width: 280px;
+	border: 1px solid #E5E5E5;
+	text-align: left;
+	/*margin-top: 12px;*/
+	background-color: whiteSmoke;
+}
+.hintbox {
+	vertical-align: top;
+	padding: 25px;
+	margin-left: 65px;
+	width: 280px;
+	border: 1px solid #E5E5E5;
+	text-align: left;
+	/*margin-top: 12px;*/
+	background-color: #FFF0AA;
+}
+.fieldheader {
+	color: #222;
+	margin-bottom: 6px;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+}
+.text {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 13px;
+	color: #333;
+}
+.list {
+	margin-top: 3px;
+	margin-bottom: 26px;
+
+}
+.listImage {
+	margin-top: -3px;
+	float: left;
+}
+.listHeader {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 16px;
+	color: #333;
+	/* margin-left: 78px; */
+	margin-bottom: 4px;
+}
+.listText {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 13px;
+	color: #333;
+	/* margin-left: 78px; */
+}
+.logintext {
+	color: #666;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 13px;
+}
+.boxtop {
+	color: #222;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 16px;
+	margin-bottom: 19px;
+}
+.boxheader {
+	color: #222;
+	margin-bottom: 6px;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+}
+.loginbutton {
+	padding-left: 18px;
+	padding-right: 18px;
+}
+.imagebutton {
+	padding: 0px 8px 0px 8px;
+	vertical-align: middle;
+}
+.imagebutton:hover {
+}

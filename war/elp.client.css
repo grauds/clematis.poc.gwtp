@@ -1,0 +1,1726 @@
+/* Add css rules here for your application. */
+
+html,body,div,span,object,iframe,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,table td,table th,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video
+	{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 13px;
+	vertical-align: baseline;
+	/*background: transparent;*/
+}
+
+html {
+	overflow-y: auto;
+	min-height: 100%;
+	height: 100%;
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section
+	{
+	display: block;
+}
+
+nav ul {
+	list-style: none;
+}
+
+blockquote,q {
+	quotes: none;
+}
+
+blockquote:before,blockquote:after,q:before,q:after {
+	content: '';
+	content: none;
+}
+
+a {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+	cursor: pointer;
+	cursor: hand;
+}
+
+ins {
+	background-color: #ff9;
+	color: #000;
+	text-decoration: none;
+}
+
+mark {
+	background-color: #ff9;
+	color: #000;
+	font-style: italic;
+	font-weight: bold;
+}
+
+del {
+	text-decoration: line-through;
+}
+
+abbr[title],dfn[title] {
+	border-bottom: 1px dotted;
+	cursor: help;
+}
+
+table {
+}
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
+}
+
+input,select {
+	vertical-align: middle;
+}
+
+body,select,input,textarea {
+	/* #444 looks better than black: twitter.com/H_FJ/statuses/11800719859 */
+	color: #444;
+	/* set your base font here, to apply evenly */
+/* font-family: Georgia, serif;  */
+}
+
+body {
+	font-family: arial, sans-serif;
+	min-height: 100%;
+	height: 100%;
+}
+
+input {
+	font-size: 95%;
+}
+
+a:hover,a:active {
+	outline: none;
+}
+
+iframe {
+	border: 0;
+}
+
+ol {
+	list-style-type: decimal;
+}
+
+/* Remove margins for navigation lists */
+nav ul,nav li {
+	margin: 0;
+}
+
+small {
+	font-size: 85%;
+}
+
+strong,th {
+	font-weight: bold;
+}
+
+td,td img {
+	vertical-align: top;
+}
+
+sub {
+	vertical-align: sub;
+	font-size: smaller;
+}
+
+sup {
+	vertical-align: super;
+	font-size: smaller;
+}
+
+pre {
+	padding: 15px;
+	/* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */
+	white-space: pre; /* CSS2 */
+	white-space: pre-wrap; /* CSS 2.1 */
+	white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+	word-wrap: break-word; /* IE */
+}
+
+textarea {
+	overflow: auto;
+}
+
+label,input[type=button],input[type=submit],button {
+	cursor: pointer;
+}
+
+button,input,select,textarea {
+	margin: 0;
+}
+
+button {
+	width: auto;
+	overflow: visible;
+}
+
+/* Global styles */
+.mainHeader {
+	border-bottom: 1px solid #c2cff1;
+	padding-top: 4px !important;
+	padding-bottom: 7px !important;
+}
+
+/*    Form styles      */
+.formHeader {
+	padding: 5px 11px;
+	position: relative;
+	overflow: hidden;
+	zoom: 1
+}
+
+.formHeaderLabel {
+	font-size: 2em;
+}
+
+/* Page syles*/
+.pageHeader {
+	background: #C2CFF1;
+	text-align: left;
+	padding-bottom: 1px;
+}
+
+.pageHeaderLabel {
+	color: #000;
+	padding-top: 5px;
+	padding-bottom: 4px;
+	position: relative;
+	overflow: hidden;
+	font: bold 16px arial, sans-serif;
+	display: block;
+	zoom: 1;
+}
+
+.paragraphHeader {
+	color: navy;
+	position: relative;
+	overflow: hidden;
+	font: bold 16px arial, sans-serif;
+	zoom: 1;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.mainLayout {
+	margin-top: 10px;
+	background: #FAFAFA;
+}
+
+.okButton {
+	font: 13px arial, sans-serif;
+	padding: 0px;
+}
+
+.createObjectButton {
+	margin: 10px 0px;
+	font: 13px arial, sans-serif;
+	padding: 0px;
+}
+
+.budgetFormTitle {
+	font: bold 13px arial, sans-serif;
+	text-align: left;
+	padding: 0px;
+	white-space: nowrap;
+}
+
+.budgetFormTitleFocused {
+	font: bold 13px arial, sans-serif;
+	text-align: left;
+	padding: 0px;
+	white-space: nowrap;
+}
+
+.budgetTextItem {
+	border-top: 1px solid #abadb3;
+	border-left: 1px solid #dbdfe5;
+	border-right: 1px solid #dbdfe5;
+	border-bottom: 1px solid #dbdfe5;
+	margin-right: 15px;
+	font: 13px arial, sans-serif;
+}
+
+.budgetTextItemFocused {
+	color: #333333;
+	-moz-outline-offset: -1;
+	border-top: 1px solid #5678ac;
+	border-left: 1px solid #bccde6;
+	border-right: 1px solid #afc6e2;
+	border-bottom: 1px solid #c0d7ec;
+	margin-right: 15px;
+	font: 13px arial, sans-serif;
+}
+
+.budgetErrorTextItem {
+	border: #B00 solid 1px;
+	margin-right: 15px;
+	font: 13px arial, sans-serif;
+}
+
+.budgetErrorTextItemFocused {
+	color: #333333;
+	-moz-outline-offset: -1;
+	border: #B00 solid 1px;
+	margin-right: 15px;
+	font: 13px arial, sans-serif;
+}
+
+.budgetWarningTextItem {
+	border: #00B solid 1px;
+	margin-right: 15px;
+	font: 13px arial, sans-serif;
+}
+
+.budgetWarningTextItemFocused {
+	color: #333333;
+	-moz-outline-offset: -1;
+	border: #00B solid 1px;
+	margin-right: 15px;
+	font: 13px arial, sans-serif;
+}
+
+.errorMessage {
+	font: 13px arial sans-serif;
+	color: #F00;
+	text-align: left;
+	padding-left: 50px;
+}
+
+.errorMessage li {
+	list-style-type: disc;
+}
+
+.warningMessage {
+	font: 13px arial sans-serif;
+	color: #00F;
+	text-align: left;
+	padding-left: 50px;
+}
+
+.successMessage {
+	font: 13px arial sans-serif;
+	color: #0F0;
+	text-align: left;
+	padding-left: 50px;
+}
+
+.genericMessage {
+	font: 13px arial sans-serif;
+	color: #000;
+}
+
+.layoutBasic {
+	background: #FFF;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding: 9px 26px 26px 26px;
+	max-width: 1000px;
+	min-width: 780px;
+}
+
+.ajaxLoader {
+	display: block;
+	margin-left: 10px;
+	margin-right: 10px;
+	font: 13px arial sans-serif;
+	padding: 9px 26px 26px 26px;
+}
+
+.layoutModal {
+	background: #FFF;
+	padding: 0px 0px 10px 0px;
+}
+
+/* IE rounded borders fix begin */
+
+.xtop, .xbottom {display:block; background:transparent; font-size:1px;}
+.xb1, .xb2, .xb3, .xb4 {display:block; overflow:hidden;}
+.xb1, .xb2, .xb3 {height:1px;}
+.xb2, .xb3, .xb4 {border-left:1px solid #68E; border-right:1px solid #68E;}
+.xb1 {margin:0 5px; background:#68E;}
+.xb2 {margin:0 3px; border-width:0 2px;}
+.xb3 {margin:0 2px;}
+.xb4 {height:2px; margin:0 1px;}
+
+.xboxcontent {display:block; border:0 solid #68E; border-width:0 1px;}
+
+
+
+.inactive .xb2, .inactive .xb3, .inactive .xb4, .inactive .xboxcontent, .inactive .xboxcontent{
+	border-color: #BBB;
+}
+.inactive .xb1{
+	background: #BBB;
+}
+
+/* delete style attrs if .borderedGroup is in .ie-rounder-container */
+.ie-rounder-container .borderedGroup, .ie-rounder-container .borderedGroup.inactive{
+	margin: 0;
+	
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	border:0;
+}
+
+/* IE rounded borders fix end */
+
+.ie-rounder-container, .borderedGroup{
+	margin: 10px 10px 2px 10px;
+}
+
+.borderedGroup, .ie-rounder-container .borderedGroup.inactive{
+	padding: 9px 26px 26px 26px;
+}
+
+
+.borderedGroup {
+	border: navy solid 2px;
+	border-collapse: collapse;
+	background: #FFF;
+	
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	box-shadow: 0 2px 2px #E3E5EB;
+	-moz-box-shadow: 0 2px 2px #E3E5EB;
+	-webkit-box-shadow: 0 2px 2px #E3E5EB;	
+}
+
+.main-menu-cont {
+	float: left;
+	width: 260px;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+/* This style is used to apply rounded corners to some elements in IE. */
+.rounded {
+	
+}
+
+.borderedGroup.inactive,.inactiveBorderedGroup {
+	border: #BBB solid 1px;
+	border-collapse: collapse;
+	background: #FFF;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding: 10px 27px 27px 27px;
+	
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	box-shadow: 0 1px 1px #E3E5EB;
+	-moz-box-shadow: 0 1px 1px #E3E5EB;
+	-webkit-box-shadow: 0 1px 1px #E3E5EB;
+	
+}
+
+
+.inactiveBorderedGroupTemp {
+	background: #FFF;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding: 10px 27px 27px 27px;
+}
+
+.gwt-TextBox {
+	border-top: 1px solid #abadb3;
+	border-left: 1px solid #dbdfe5;
+	border-right: 1px solid #dbdfe5;
+	border-bottom: 1px solid #dbdfe5;
+	font: 13px arial, sans-serif;
+}
+
+.gwt-TextBox.error {
+	border: #B00 solid 1px;
+	margin-right: 15px;
+	font: 13px arial, sans-serif;
+}
+
+.gwt-TextBox.warning {
+	border: #00B solid 1px;
+	font: 13px arial, sans-serif;
+}
+
+.hor-scrollable { /*
+	overflow: hidden !important;
+    width: 100%;
+    */
+	
+}
+
+.hor-scrollable-inner { /*
+	overflow-x: scroll;
+    overflow-y: auto;
+    width: 100%;
+    */
+	
+}
+
+/* For IE */
+/* set the image to use and establish the lower-right position */
+.cssbox,.cssbox_body,.cssbox_head,.cssbox_head h2 {
+	background: transparent url(img.php.png) no-repeat bottom right
+}
+
+.cssbox { /* intended total box width - padding-right(next) */
+	width: 335px !important; /* IE Win = width - padding */
+	width: 320px;
+	/* the gap on the right edge of the image (not content padding) */
+	padding-right: 15px; /* use to position the box */
+	margin: 20px auto
+} /* set the top-right image */
+.cssbox_head {
+	background-position: top right;
+	/* pull the right image over on top of border */
+	margin-right: -15px; /* right-image-gap + right-inside padding */
+	padding-right: 40px
+} /* set the top-left image */
+.cssbox_head h2 {
+	background-position: top left;
+	margin: 0; /* reset main site styles*/
+	border: 0; /* ditto */
+	/* padding-left = image gap + interior padding ... no padding-right */
+	padding: 25px 0 15px 40px;
+	height: auto !important;
+	height: 1%
+} /* IE Holly Hack */ /* set the lower-left corner image */
+.cssbox_body {
+	background-position: bottom left;
+	margin-right: 25px; /* interior-padding right */
+	padding: 15px 0 15px 40px
+}
+
+/* mirror .cssbox_head right/left */ /* Objects list styles */
+.objectListStyle,.objectListStyleDark {
+	margin: 0;
+	border-color: #FFF;
+	border: 0px;
+	background-color: #FFF;
+	padding-left: 26px;
+	padding-right: 0px;
+	cursor: pointer;
+	height: 21px;
+}
+
+.objectListStyleSelectedOver,.objectListStyleSelectedOverDark {
+	padding-left: 26px;
+	padding-right: 0px;
+	cursor: pointer;
+	background: #C2CFF1;
+	height: 21px;
+}
+
+.objectListStyleSelected,.objectListStyleSelectedDark {
+	padding-left: 26px;
+	padding-right: 0px;
+	cursor: pointer;
+	background: #C2CFF1;
+	height: 21px;
+}
+
+.objectListStyleOver,.objectListStyleOverDark {
+	padding-left: 26px;
+	padding-right: 0px;
+	height: 21px;
+	cursor: pointer;
+	background-color: #FFC;
+}
+
+.objectListLayout {
+	border-top: 5px solid #C2CFF1;
+	border-bottom: 1px solid #C2CFF1;
+	border-right: 1px solid #C2CFF1;
+}
+
+.objectListLayoutSelected {
+	border-top: 5px solid #C2CFF1;
+	border-bottom: 1px solid #C2CFF1;
+	border-right: 1px solid #C2CFF1;
+}
+
+/* Main menu section style */
+.sectionHeader {
+	background: #FFF;
+	border-top: 1px solid #C2CFF1;
+	font-size: 13px;
+	padding-left: 10px;
+	font-weight: bold;
+	margin-left: 2px;
+}
+
+/* Main menu style */
+.menuStyle,.menuStyleDark {
+	border-color: #FFF;
+	border: 0px;
+	background-color: #FFF;
+	padding-left: 26px;
+	padding-right: 0px;
+	cursor: pointer;
+	font-size: 13px;
+}
+
+.menuStyleSelectedOver,.menuStyleSelectedOverDark {
+	padding-left: 26px;
+	padding-right: 0px;
+	cursor: pointer;
+	background: #C2CFF1;
+	font-size: 13px;
+}
+
+.menuStyleSelected,.menuStyleSelectedDark {
+	padding-left: 26px;
+	padding-right: 0px;
+	cursor: pointer;
+	background: #C2CFF1;
+	font-size: 13px;
+}
+
+.menuStyleOver,.menuStyleOverDark {
+	padding-left: 26px;
+	padding-right: 0px;
+	height: 21px;
+	cursor: pointer;
+	background-color: #FFC;
+	font-size: 13px;
+}
+
+.menuSection {
+	border-style: none;
+	border-color: #FFF;
+	border-width: 0px;
+}
+
+.menuLayout {
+	border-top: 0px;
+	border-bottom: 1px solid #C2CFF1;
+}
+
+/* Form splitter*/
+.splitbar {
+	background: none repeat scroll 0 0 #EBEFF9;
+	cursor: pointer;
+}
+
+.appToggleSplitbar {
+	background: #c2cff1;
+}
+
+.toggleIcon {
+	border-color: #ebeff9 #68e #ebeff9 #ebeff9;
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 50%;
+	border-style: solid;
+	border-width: 5px 5px 5px 0;
+	margin-top: -5px;
+	margin-left: 1px;
+}
+
+.toggleIconHover {
+	border-color: #c2cff1 #fff #c2cff1 #c2cff1;
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 50%;
+	border-style: solid;
+	border-width: 5px 5px 5px 0;
+	margin-top: -5px;
+	margin-left: 1px;
+}
+
+.toggleIconHiden {
+	border-color: #ebeff9 #ebeff9 #ebeff9 #68e;
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 50%;
+	border-style: solid;
+	border-width: 5px 0 5px 5px;
+	margin-top: -5px;
+	margin-left: 1px;
+}
+
+.toggleIconHoverHidden {
+	border-color: #c2cff1 #c2cff1 #c2cff1 #fff;
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 50%;
+	border-style: solid;
+	border-width: 5px 0 5px 5px;
+	margin-top: -5px;
+	margin-left: 1px;
+}
+
+.startBody {
+	font-family: arial, sans-serif;
+	padding: 10px;
+	margin: 0px;
+	font-size: small;
+	color: black;
+	box-sizing: border-box;
+}
+
+.startInnerItem {
+	font-family: arial, sans-serif;
+	padding: 5px 10px 5px 10px;
+	font-size: small;
+	color: black;
+}
+
+.blockInline {
+	display: inline;
+}
+
+.startFooter {
+	width: 100%;
+	margin-top: 30px;
+	text-align: center;
+}
+
+.remark {
+	font-family: arial, sans-serif;
+	font-weight: normal;
+	font-size: xx-small;
+	color: gray;
+	test-align: center;
+	display: inline;
+}
+
+/* Decorated panels */
+.gwt-DecoratorPanel {
+	border: 1px solid #bbb;
+}
+
+/* Menu */
+#mainMenuList {
+	color: navy;
+	font-size: 13px;
+	font-family: arial, sans-serif;
+}
+
+#mainMenuList ul,li {
+	background: none repeat scroll 0 0 #FFFFFF;
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+#mainMenuList .link-selected:hover {
+	background: none repeat scroll 0 0 #C2CFF1;
+}
+
+.link {
+	cursor: pointer;
+	text-decoration: none;
+}
+
+#mainMenuList a {
+	text-decoration: none;
+	width: 234px;
+}
+
+.menuContainer {
+	font-weight: normal;
+	width: 237px;
+	height: 21px;
+	padding-left: 23px;
+	cursor: pointer;
+}
+
+.menuHeader {
+	font-weight: bold;
+	width: 250px;
+	height: 21px;
+	padding: 10px 0px 6px 10px;
+	border-top: 1px solid #C2CFF1;
+	cursor: default;
+	margin-top: 6px;
+}
+
+#mainMenuList li .menuContainer:hover {
+	background-color: #FFFFCC;
+}
+
+#subContainer {
+	width: 260px;
+	height: 28px;
+	padding: 7px 0px 4px 10px;
+}
+
+#contentSplitter {
+	background: none repeat scroll 0 0 #EBEFF9;
+	cursor: pointer;
+	width: 8px;
+	height: 100%;
+}
+
+#mainContentViewer {
+	height: 100%;
+}
+
+.contentSplitter {
+	background: none repeat scroll 0 0 #EBEFF9;
+	cursor: pointer;
+	width: 8px;
+}
+
+.menuContainerSelected {
+	background: none repeat scroll 0 0 #C2CFF1;
+}
+
+.valign-bottom {
+	vertical-align: bottom;
+}
+
+.navText {
+	cursor: pointer;
+	text-decoration: underline;
+	background: none repeat scroll 0 0 transparent;
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+	color: #0000EE;
+}
+
+.bordered-push-button {
+	cursor: pointer;
+	border: 1px solid #AAAAAA;
+	padding-left: 2px;
+	padding-right: 2px;
+	margin-left: 1px;
+	margin-right: 1px;
+}
+
+.inlined {
+	display: inline-block;
+	vertical-align: middle;
+	zoom: 1; *
+	display: inline;
+}
+
+/* Suggest dropdown widget start*/
+.suggest-dropdown-wrap {
+	margin-right: 2px;
+	margin-left: 2px;
+	display: inline-block;
+	vertical-align: middle;
+	zoom: 1; *
+	display: inline;
+}
+
+.suggest-dropdown-wrap table tr td {
+	vertical-align: middle;
+	padding: 0;
+}
+
+.suggest-dropdown-button {
+	border: 1px solid #AAAAAA;
+	margin-left: 2px;
+	cursor: pointer;
+	width: 16px;
+	text-align: center;
+}
+/* Suggest dropdown widget end*/
+
+/* TogglePanel widget start*/
+.toggle-panel .borderedGroup>table{
+	width: 100%;
+}
+.toggle-panel .header table tr td {
+	color: navy;
+	font: bold 16px arial, sans-serif;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+.toggle-panel .header table tr td:first-child {
+	font-size: inherit;
+	padding-top: 0;
+	padding-bottom: 0;
+	vertical-align: middle;
+}
+.toggle-panel .header table tr td img{
+	vertical-align: bottom;
+}
+
+.toggle-panel table.paragraph .panel-info, .toggle-panel .panel-info{
+	text-align: right;
+	padding-top: 0;
+	vertical-align: top;
+}
+
+/* TogglePanel widget end*/
+
+/* Google button style */
+/* Start custom button CSS here    ---------------------------------------- */
+.btn {
+	display: inline-block;
+	background: none;
+	margin: 0;
+	padding: 3px 0;
+	border-width: 0;
+	overflow: visible;
+	font: 100%/1.2 Arial, Sans-serif;
+	text-decoration: none;
+	color: #333;
+}
+
+* html button.btn {
+	padding-bottom: 1px;
+}
+
+/*  Immediately below is a temporary hack to serve the        
+	following margin values only to Gecko browsers       
+	Gecko browsers add an extra 3px of left/right        
+	padding to button elements which can't be overriden.       
+	Thus, we use -3px of left/right margin to overcome this. */
+html:not         ([lang *=""]         ) button.btn {
+	margin: 0 -3px;
+}
+
+.btn span {
+	background: #ddd url(images/bg-button.gif) repeat-x 0 0;
+	margin: 0px;
+	padding: 3px 0;
+	border-left: 1px solid #bbb;
+	border-right: 1px solid #aaa;
+}
+
+* html .btn span {
+	padding-top: 0;
+}
+
+.btn span span {
+	position: relative;
+	padding: 3px .4em;
+	border-width: 0;
+	border-top: 1px solid #bbb;
+	border-bottom: 1px solid #aaa;
+	white-space: nowrap;
+}
+
+/* pill classes only needed if using pill style buttons ( LEFT | CENTER | RIGHT ) */
+button.pill-l span {
+	border-right-width: 0;
+}
+
+button.pill-l span span {
+	border-right: 1px solid #bbb;
+}
+
+button.pill-c span {
+	border-right-style: none;
+	border-left-color: #fff;
+}
+
+button.pill-c span span {
+	border-right: 1px solid #bbb;
+}
+
+button.pill-r span {
+	border-left-color: #fff;
+}
+
+/* only needed if implementing separate hover/focus/active state for buttons */
+.btn:hover span,.btn:hover span span,.btn:focus span,.btn:focus span span
+	{
+	cursor: pointer; /* important for any clickable/pressable element */
+	border-color: #9cf !important;
+	color: #000;
+}
+
+.btn:active span {
+	background-position: 0 -400px;
+	outline: none;
+}
+
+.btn:focus,.btn:active {
+	outline: none;
+	/* doesn't seem to be respected for <button>, only <a> */
+} /* use if one button should be the 'primary' button */
+.primary {
+	font-weight: bold;
+	color: #000;
+}
+
+.btn.disabled, .btn.disabled span span, .btn.disabled:hover span,.btn.disabled:hover span span,.btn.disabled:focus span,.btn.disabled:focus span span,
+.btn.disabled:focus,.btn.disabled:active,.btn.disabled:active span {
+	border-color: #bbb;
+	cursor: default;
+	color: #888;
+}
+.btn.disabled:active span{
+	background-position: 0 0;
+}
+
+
+.contentTableContainer {
+	height: 100%;
+}
+
+.layoutWrapper {
+	width: 100%;
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+.rigidArea-right {
+	margin-right: 50px;
+	font-weight: bold;
+	font-size: 13px;
+}
+
+.permArea-right {
+	margin-right: 50px;
+	font-size: 13px;
+}
+
+.warningBorder {
+	border: 3px;
+}
+
+.paragraph {
+	margin-top: 10px;
+}
+
+.newListElementButton {
+	margin-left: 10px;
+}
+
+table.paragraph {
+	margin-top: 5px;
+}
+
+table.paragraph td {
+	padding-top: 5px;
+}
+
+.budgetItemsList {
+	margin-top: 20px;
+}
+
+.budgetItemsList td {
+	padding: 2px 5px;
+}
+
+.budgetItemsList .header td {
+	text-align: center;
+	color: #4B4A4A;
+	font-weight: bold;
+	text-shadow: #DDF 1px 1px 0px;
+	border-bottom-color: #6F7277;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+}
+
+.budgetItemsList .money {
+	text-align: right;
+}
+
+.budgetItemsList .sum {
+	color: #4B4A4A;
+	font-weight: bold;
+}
+
+.aggrByScenAndBusArea td {
+	white-space: nowrap;
+	text-align: right;
+}
+
+.aggrByScenAndBusArea .header td {
+	white-space: normal;
+	text-align: center;
+	/*border-bottom-width: 1px;*/
+}
+
+.sect-separated {
+	border-right: 2px solid gray;
+}
+
+.arrow-place,.arrow-up,.arrow-down {
+	padding: 0px 15px;
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+.arrow-up {
+	background-image: url("/images/arrow-n.png");
+}
+
+.arrow-down {
+	background-image: url("/images/arrow-s.png");
+}
+
+.advancedList {
+	width: 100%;
+}
+
+.advancedList th {
+	cursor: pointer;
+	text-align: center;
+	vertical-align: bottom;
+	white-space: nowrap;
+}
+
+.advancedList th span {
+	display: block;
+}
+
+.advancedList th>span:FIRST-CHILD {
+	margin-bottom: 10px;
+}
+
+.advancedList th input,.advancedList th select {
+	width: 100%;
+}
+
+
+/* Styles for data picker from standard theme of GWT */
+
+input.gwt-DateBox {
+	border-top: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	font: 13px arial, sans-serif;
+	text-align: right;
+}
+
+.dateBoxFormatError {
+	background: #ffcccc;
+}
+
+.dateBoxPopup {
+    border-color: #C8C8C8 #BEBEBE #A8A8A8;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+	border: 0px solid #C3D9FF;
+	padding: 0px;	    
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);	
+}
+
+.gwt-DatePicker {
+	border: none;	
+	cursor: default;
+}
+
+.gwt-DatePicker td,.datePickerMonthSelector td:focus {
+	outline: none
+}
+
+.datePickerDays {
+	width: 100%;
+	background: #f3f3f3;
+}
+
+.datePickerDay,.datePickerWeekdayLabel,.datePickerWeekendLabel {
+	font-size: 100%;
+	text-align: center;
+	padding: 4px;
+	outline: none;
+}
+
+.datePickerWeekdayLabel,.datePickerWeekendLabel {
+	background: #f3f3f3;
+	padding: 0px 4px 2px;
+	cursor: default;
+}
+
+.datePickerDay {
+	padding: 5px;
+	cursor: hand;
+	cursor: pointer;
+}
+
+.datePickerDayIsToday {
+	border: 1px solid black;
+	padding: 3px;
+}
+
+.datePickerDayIsWeekend {
+	background: #f3f3f3;
+}
+
+.datePickerDayIsFiller {
+	color: #999999;
+}
+
+.datePickerDayIsValue {
+}
+
+.datePickerDayIsDisabled {
+	color: #999999;
+	font-style: italic;
+}
+
+.datePickerDayIsHighlighted {
+	background: #F0E68C;
+}
+
+.datePickerDayIsValueAndHighlighted {
+	background: #bbddd9;
+}
+
+.datePickerMonthSelector {
+	background: #f3f3f3;
+	width: 100%;
+}
+
+td.datePickerMonth {
+	text-align: center;
+	vertical-align: center;
+	white-space: nowrap;
+	font-weight: bold;
+	color: black;
+    font-size: 110%;
+    padding-bottom: 6px;
+}
+
+.datePickerPreviousButton,.datePickerNextButton {
+	font-size: 150%;
+	line-height: 1em;
+	color: black;
+	cursor: hand;
+	cursor: pointer;
+	padding: 0px 4px;
+}
+
+/* Styles for data picker from standard theme of GWT */
+
+/* Styles for dialog from standard theme of GWT */
+
+.gwt-DialogBox .Caption {
+	background: #e3e8f3 url(images/hborder.png) repeat-x 0px -2003px;
+	padding: 8px;
+	cursor: default;
+	border-color: #C8C8C8 #BEBEBE #A8A8A8;
+	border-radius: 2px 2px 2px 2px;
+	border-style: solid;
+	border-width: 0px;
+  	border: 0px solid #C3D9FF;
+   	padding: 0px;				
+	box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+	font-weight: bold;
+}
+
+.gwt-DialogBox .Buttons {
+	border-top: 1px solid #bbbbbb;
+	cursor: default;
+}
+
+.gwt-DialogBox .Buttons td {
+	padding: 4px 4px 4px 0px;
+}
+
+.gwt-DialogBox .dialogContent {
+	
+}
+
+.gwt-DialogBox .dialogTop {
+    height: 20px;
+}
+
+
+.gwt-DialogBox .dialogTopCenter {
+    background: white;
+}
+
+.gwt-DialogBox .dialogMiddleCenter {
+	padding: 0px;
+	background: white;
+}
+
+.gwt-DialogBox .dialogBottomCenter {
+    background: white;
+}
+
+.gwt-DialogBox .dialogMiddleLeft {
+	background: white;
+}
+
+.gwt-DialogBox .dialogMiddleRight {
+	background: white;
+}
+
+.gwt-DialogBox .dialogTopLeftInner {
+	width: 5px;
+	zoom: 1;
+}
+
+.gwt-DialogBox .dialogTopRightInner {
+	width: 8px;
+	zoom: 1;
+}
+
+.gwt-DialogBox .dialogBottomLeftInner {
+	width: 5px;
+	height: 8px;
+	zoom: 1;
+}
+
+.gwt-DialogBox .dialogBottomRightInner {
+	width: 5px;
+	height: 8px;
+	zoom: 1;
+}
+
+.gwt-DialogBox .dialogTopLeft {
+	background: white;
+}
+
+.gwt-DialogBox .dialogTopRight {
+	background: white;
+}
+
+.gwt-DialogBox .dialogBottomLeft {
+	background: white;
+}
+
+.gwt-DialogBox .dialogBottomRight {
+	background: white;
+}
+
+html>body .gwt-DialogBox {
+	border-color: #C8C8C8 #BEBEBE #A8A8A8;
+	border-radius: 2px 2px 2px 2px;
+	border-style: solid;
+	border-width: 0px;
+   		border: 0px solid #C3D9FF;
+   	padding: 0px;				
+	box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);	
+}
+
+* html .gwt-DialogBox .dialogTopLeftInner {
+	width: 5px;
+	overflow: hidden;
+}
+
+* html .gwt-DialogBox .dialogTopRightInner {
+	width: 8px;
+	overflow: hidden;
+}
+
+* html .gwt-DialogBox .dialogBottomLeftInner {
+	width: 5px;
+	height: 8px;
+	overflow: hidden;
+}
+
+* html .gwt-DialogBox .dialogBottomRightInner {
+	width: 8px;
+	height: 8px;
+	overflow: hidden;
+}
+
+.cw-DialogBox {
+	
+}
+
+/* Styles for dialog from standard theme of GWT */
+
+/* Styles for rich text from standard theme of GWT */
+
+.gwt-RichTextArea {
+	
+}
+
+.hasRichTextToolbar {
+	border: 1px;
+	border-style: solid;
+	border-color: #DBDFE5;
+}
+
+.gwt-RichTextToolbar {
+	background: #e3e8f3 url(images/hborder.png) repeat-x 0px -2003px;
+	border-bottom: 0 none;
+	padding: 3px;
+	margin: 0px;
+}
+
+.gwt-RichTextToolbar .gwt-PushButton-up {
+	padding: 0px 1px 0px 0px;
+	margin-right: 4px;
+	margin-bottom: 4px;
+	border-width: 1px;
+}
+
+.gwt-RichTextToolbar .gwt-PushButton-up-hovering {
+	margin-right: 4px;
+	margin-bottom: 4px;
+	padding: 0px 1px 0px 0px;
+	border-width: 1px;
+}
+
+.gwt-RichTextToolbar .gwt-PushButton-down {
+	margin-right: 4px;
+	margin-bottom: 4px;
+	padding: 0px 0px 0px 1px;
+	border-width: 1px;
+}
+
+.gwt-RichTextToolbar .gwt-PushButton-down-hovering {
+	margin-right: 4px;
+	margin-bottom: 4px;
+	padding: 0px 0px 0px 1px;
+	border-width: 1px;
+}
+
+.gwt-RichTextToolbar .gwt-ToggleButton-up {
+	margin-right: 4px;
+	margin-bottom: 4px;
+	padding: 0px 1px 0px 0px;
+	border-width: 1px;
+}
+
+.gwt-RichTextToolbar .gwt-ToggleButton-up-hovering {
+	margin-right: 4px;
+	margin-bottom: 4px;
+	padding: 0px 1px 0px 0px;
+	border-width: 1px;
+}
+
+.gwt-RichTextToolbar .gwt-ToggleButton-down {
+	margin-right: 4px;
+	margin-bottom: 4px;
+	padding: 0px 0px 0px 1px;
+	border-width: 1px;
+}
+
+.gwt-RichTextToolbar .gwt-ToggleButton-down-hovering {
+	margin-right: 4px;
+	margin-bottom: 4px;
+	padding: 0px 0px 0px 1px;
+	border-width: 1px;
+}
+
+.cw-RichText {
+	border: 1px solid #BBBBBB;
+	border-spacing: 0px;
+}
+
+/* Styles for rich text from standard theme of GWT */
+
+/* Styles for suggest box from standard theme of GWT */
+
+.greySmallText {
+	color: Gray;
+	font-size: xx-small;
+	white-space: nowrap;
+}
+
+.defaultButton {
+	font-weight: bold;
+}
+
+.gwt-SuggestBox {
+	padding: 0px;
+}
+
+.gwt-SuggestBoxPopup {
+	margin-left: 3px;
+	    border-color: #C8C8C8 #BEBEBE #A8A8A8;
+	    border-radius: 2px 2px 2px 2px;
+	    border-style: solid;
+	    border-width: 1px;
+	    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);	
+}
+
+.gwt-SuggestBoxPopup .item {
+	padding: 2px 6px;
+	color: #424242;
+	cursor: default;
+}
+
+.gwt-SuggestBoxPopup .item-selected {
+	background: #ECECEC;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupContent {
+	background: white;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupTopCenter {
+	background: #fff;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupBottomCenter {
+	background: #fff;
+	-background: #fff;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupMiddleLeft {
+	background: #fff;
+	-background: #fff;
+
+}
+
+.gwt-SuggestBoxPopup .suggestPopupMiddleRight {
+	background: #fff;
+	-background: #fff;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupTopLeftInner {
+	width: 5px;
+	height: 5px;
+	zoom: 1;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupTopRightInner {
+	width: 8px;
+	height: 5px;
+	zoom: 1;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupBottomLeftInner {
+	width: 5px;
+	height: 8px;
+	zoom: 1;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupBottomRightInner {
+	width: 8px;
+	height: 8px;
+	zoom: 1;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupTopLeft {
+	background: #fff;
+	-background: #fff;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupTopRight {
+	background: #fff;
+	-background: #fff;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupBottomLeft {
+	background: #fff;
+	-background: #fff;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupBottomRight {
+	background: #fff;
+	-background: #fff;
+}
+
+html>body .gwt-SuggestBoxPopup {
+	
+}
+
+* html .gwt-SuggestBoxPopup .suggestPopupTopLeftInner {
+	width: 5px;
+	height: 5px;
+	overflow: hidden;
+}
+
+* html .gwt-SuggestBoxPopup .suggestPopupTopRightInner {
+	width: 8px;
+	height: 5px;
+	overflow: hidden;
+}
+
+* html .gwt-SuggestBoxPopup .suggestPopupBottomLeftInner {
+	width: 5px;
+	height: 8px;
+	overflow: hidden;
+}
+
+* html .gwt-SuggestBoxPopup .suggestPopupBottomRightInner {
+	width: 8px;
+	height: 8px;
+	overflow: hidden;
+}
+
+/* Styles for suggest box from standard theme of GWT */
+
+.gwt-TabLayoutPanel {
+}
+.gwt-TabLayoutPanel .gwt-TabLayoutPanelTabs {
+}
+.gwt-TabLayoutPanelContentContainer {
+    border-color: #C8C8C8 #BEBEBE #A8A8A8;
+	    border-radius: 2px 2px 2px 2px;
+	    border-style: solid;
+	    border-width: 1px;
+}
+.gwt-TabLayoutPanel .gwt-TabLayoutPanelContent {
+    border: none;
+    overflow: hidden;
+    padding: 6px;
+}
+.gwt-TabLayoutPanel .gwt-TabLayoutPanelTab {
+    background: none repeat scroll 0 0 #D0E4F6;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 6px;
+    padding: 3px 6px;
+    text-align: center;
+}
+.gwt-TabLayoutPanel .gwt-TabLayoutPanelTab-selected {
+    background: none repeat scroll 0 0 #92C1F0;
+    cursor: default;
+}
+
+
+.gwt-PopupPanel {
+	    border-color: #C8C8C8 #BEBEBE #A8A8A8;
+	    border-radius: 2px 2px 2px 2px;
+	    border-style: solid;
+	    border-width: 1px;
+	    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);	
+	padding: 0px;
+	background: white;
+}
+
+.redbutton {
+	background-color: #D14836;
+	border: 1px solid transparent;
+	border-radius: 2px;
+	display: inline-block;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	height: 32px;
+	min-width: 46px;
+	padding-left: 8px;
+	padding-right: 8px;
+	text-shadow: rgba(0, 0, 0, 0.0976563) 0px 1px 0px;
+	text-align: center;
+	color: white;
+	cursor: default;
+}
+.redbutton:hover {
+	background-color: #B0281A;
+	background-image: -webkit-linear-gradient(top, #DD4B39, #B0281A);
+	background-origin: padding-box;
+	border: 1px solid #992A1B;
+	text-shadow: rgba(0, 0, 0, 0.296875) 0px 1px 0px;
+	box-shadow: rgba(0, 0, 0, 0.296875) 0px 1px 2px 0px inset;
+}
+.bluebutton {
+	background-color: #4D90FE;
+	background-origin: padding-box;
+	border: 1px solid #3079ED;
+	border-radius: 2px;
+	box-sizing: border-box;
+	display: inline-block;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	height: 32px;
+	min-width: 46px;
+	padding-left: 8px;
+	padding-right: 8px;
+	text-shadow: rgba(0, 0, 0, 0.0976563) 0px 1px 0px;
+	text-align: center;
+	color: white;
+	cursor: default;
+	white-space: pre;
+	vertical-align: top;
+}
+.bluebutton:hover {
+	background-color: #357AE8;
+	background-image: -webkit-linear-gradient(top, #4D90FE, #357AE8);
+	border: 1px solid #2F5BB7;
+	text-shadow: rgba(0, 0, 0, 0.296875) 0px 1px 0px;
+	box-shadow: rgba(0, 0, 0, 0.296875) 0px 1px 2px 0px inset;
+}
+.bluebutton:disabled, .bluebutton:disabled:hover, .bluebutton:disabled:active {
+	background-color: none;
+	opacity: .5;
+	filter: alpha(opacity=50);
+	cursor: default;
+	pointer-events: none;
+}
+.link {
+	color: #15C;
+	cursor: auto;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 13px;
+	text-decoration: none;
+}
+.link:visited {
+	color: #61C;
+}
+.link:hover {
+	text-decoration: underline;
+}
+.gwt-Label {
+	color: navy;
+	margin-bottom: 4px;
+}
+
+.redHeader {
+	color: #DD4B39;
+	font-size: 25px;
+	font-family: arial, helvetica, sans-serif;
+}
+.blackHeader {
+	color: #000000;
+	font-size: 25px;
+	font-family: arial, helvetica, sans-serif;
+}	
+
+.greybutton {
+	background-color: transparent;
+	background-image: linear-gradient(top, whiteSmoke, #F1F1F1);
+	background-image: -moz-linear-gradient(top, whiteSmoke, #F1F1F1);
+	background-image: -o-linear-gradient(top, whiteSmoke, #F1F1F1);
+	background-image: -webkit-gradient(linear,left top,left bottom,from(whiteSmoke),to(#F1F1F1));
+	background-image: -webkit-linear-gradient(top, whiteSmoke, #F1F1F1);
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 2px;
+	box-sizing: border-box;
+	display: inline-block;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	height: 32px;
+	min-width: 46px;
+	padding-left: 8px;
+	padding-right: 8px;
+	text-align: center;
+	color: #444;
+	cursor: default;
+	white-space: pre;
+	vertical-align: top;
+}
+.greybutton:hover {
+	background-image: linear-gradient(top, #F8F8F8, #F1F1F1);
+	background-image: -moz-linear-gradient(top, #F8F8F8, #F1F1F1);
+	background-image: -o-linear-gradient(top, #F8F8F8, #F1F1F1);
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#F8F8F8),to(#F1F1F1));
+	background-image: -webkit-linear-gradient(top, #F8F8F8, #F1F1F1);
+	border: 1px solid #C6C6C6;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+.greybutton:disabled, .greybutton:disabled:hover, .greybutton:disabled:active {
+	background-color: none;
+	opacity: .5;
+	filter: alpha(opacity=50);
+	cursor: default;
+	pointer-events: none;
+}

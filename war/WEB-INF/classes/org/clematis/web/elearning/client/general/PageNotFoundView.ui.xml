@@ -1,0 +1,50 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:b="urn:import:org.clematis.web.elearning.client.ui.input"
+	ui:generateFormat="com.google.gwt.i18n.rebind.format.PropertiesFormat"
+    ui:generateLocales="default">
+    
+<ui:style field="general" src="general.css" />    
+<ui:with field='res' type='org.clematis.web.elearning.client.resources.Resources' />
+
+<ui:style>
+
+.module-number {
+    color: #CC7C0F;
+    display: inline;
+    float: left;
+    font-family: arial;
+    font-size: 48px;
+    line-height: 41px;
+    width: 40px;
+}
+
+.image {
+    float:center; 
+    margin: 20px; 	
+    cursor: pointer;
+    cursor: hand;
+}
+
+</ui:style>
+
+<g:HTMLPanel ui:field="panelContainer">
+	<g:HTMLPanel ui:field="panelMain">
+		<table>
+			<tr>
+				<td style="vertical-align: top;">
+					<ui:msg>
+								<h1 class="text">Искомая страница не найдена.</h1>
+								<p class="{general.listText}">
+									<g:Image styleName="{style.image}" resource="{res.page404}"/>
+								</p>						
+			    	</ui:msg>
+  			    </td>
+			</tr>
+		</table>	
+	</g:HTMLPanel>
+
+</g:HTMLPanel>
+
+</ui:UiBinder>

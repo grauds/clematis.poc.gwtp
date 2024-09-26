@@ -1,0 +1,53 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:org.clematis.web.elearning.client.ui">
+	
+	<ui:style field="general" src="../general/general.css" />    
+	<ui:with field='res' type='org.clematis.web.elearning.client.resources.Resources' />
+	
+	<ui:style>
+		.module-number {
+		    color: #CC7C0F;
+		    display: inline;
+		    float: left;
+		    font-family: arial;
+		    font-size: 22px;
+		    line-height: 41px;
+		    margin-right: 10px;
+		}		
+		
+		.user {
+	       margin-right: 10px;
+	
+	    }
+	    
+	    .usermenu-info {
+			font-family: arial, helvetica, sans-serif;
+			font-size: 14px;
+			font-weight: normal;
+			padding-right: 8px;
+			overflow: hidden;
+            width: 220px;
+		}
+	</ui:style>
+	
+	<g:HorizontalPanel>
+	   <g:cell><w:PinWidget ui:field="pin" /></g:cell>
+	   <g:cell>
+				  <g:HorizontalPanel>
+				    <g:cell>
+				       <g:Image resource="{res.user}" styleName="{style.user}"/>
+				    </g:cell>
+				    <g:cell width="200px">
+				       <g:HTMLPanel>
+							<g:Label ui:field="userName" />
+							<div class="{style.usermenu-info}">
+								<g:Label ui:field="userEmail" />
+							</div>
+				       </g:HTMLPanel>
+				    </g:cell>
+				  </g:HorizontalPanel>
+	   </g:cell>
+	</g:HorizontalPanel>
+</ui:UiBinder> 

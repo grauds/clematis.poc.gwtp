@@ -1,0 +1,43 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style type="org.clematis.web.elearning.client.ui.ScheduleWidget.ScheduleWidgetStyle">
+       .buttonsPanel
+       {
+            margin: 10px;	
+	   }
+	   
+	   .switcherButton
+		{
+		    border: 0px; 
+		    background: transparent none;	
+	        height: 29px;
+		    padding: 0px 8px 0px 8px;
+		    margin-top: 12px;
+			font-family: arial, helvetica, sans-serif;
+		    font-size: 14px;
+			color: black;
+			width: 100%;	  
+			cursor: pointer;  
+		}
+		
+		.cw-FlexTable td {
+			  /**border: 1px solid #BBBBBB;*/
+			  margin: 3px;
+			  vertical-align: top;
+		}
+		
+		.cell {
+             margin: 3px;	
+	         width: 100px;
+	         height: 30px;
+	         border: 1px solid #f3f3f3;
+	    }
+	   
+	</ui:style>
+		
+		<g:VerticalPanel>
+		   <g:FlexTable ui:field="panel" styleName="{style.cw-FlexTable}"/>		   
+	    </g:VerticalPanel> 
+
+</ui:UiBinder> 

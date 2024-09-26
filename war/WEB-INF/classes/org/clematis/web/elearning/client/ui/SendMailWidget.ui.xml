@@ -1,0 +1,237 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:o="urn:import:com.sun.org.apache.xpath.internal.operations"
+	xmlns:b="urn:import:org.clematis.web.elearning.client.ui.input">
+	
+	<ui:style>
+		@external usermenu-popup, usermenu-arrow, usermenu-north, usermenu-header, usermenu-info;
+		.usermenu-popup {
+			display: inline-block;
+			position: relative;
+			text-align: left;
+			text-indent: 0px;
+			margin: 20px;
+			background: none repeat scroll 0 0 #FFFFFF;
+			border-color: #C8C8C8 #BEBEBE #A8A8A8;
+			border-radius: 2px 2px 2px 2px;
+			border-style: solid;
+			border-width: 0px;
+     		border: 0px solid #C3D9FF;
+	    	padding: 0px;				
+			box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+			margin: 0;
+			outline: medium none;
+			padding: 0;
+			position: absolute;
+			z-index: 12200;
+		}
+		
+		.greybox {
+			vertical-align: top;
+			padding: 25px;
+			margin-left: 65px;
+			width: 360px;
+			border: 1px solid #E5E5E5;
+			text-align: left;
+			/*margin-top: 12px;*/
+			background-color: whiteSmoke;
+		}		
+		
+		.usermenu-popup,.usermenu-arrow:after {
+			background: rgba(256, 256, 256, 1.0);
+			border-color: #C8C8C8 #BEBEBE #A8A8A8;
+			border-radius: 2px 2px 2px 2px;
+			border-style: solid;
+			border-width: 1px;
+		}
+		
+		.usermenu-popup p {
+			display: block;
+			padding: 14px 10px;
+			font-size: 14px;
+		}
+		
+		.usermenu-popup ul {
+			list-style: none;
+			margin: 0;
+			padding: 0px;
+			-webkit-border-radius: 7px;
+			-moz-border-radius: 7px;
+			border-radius: 7px;
+		}
+		
+		.usermenu-popup li:first-child {
+			border-top: none;
+			margin-top: 0;
+		}
+		
+		.usermenu-popup li:last-child {
+			border-bottom: none;
+			margin-bottom: 6px;
+		}
+		
+		.usermenu-popup li {
+			height: inputheight;
+			box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			padding-left: 13px;
+			background: white;
+			border: 0px;
+			border-radius: 1px;
+			font-family: arial, helvetica, sans-serif;
+			font-size: fontsize;
+			color: #666666;
+			width: 100%;
+			text-decoration: none;
+		}
+		
+		.usermenu-popup li:hover {
+			background-color: #ECECEC;
+			background-image: -moz-linear-gradient(center top, #FDFDFD, #F3F3F3);
+			box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+			color: #333333;
+		}
+		
+		.usermenu-popup a {
+			margin: 4px 0;
+			display: block;
+			text-decoration: none;
+			text-indent: 0px;
+			line-height: 2em;
+		}
+		
+		.usermenu-popup a:link {
+			color: #3671d1;
+			text-decoration: none;
+		}
+		
+		.usermenu-popup .link a:visited {
+			color: #3671d1;
+			text-decoration: none;
+		}
+		
+		.usermenu-popup .link a:hover {
+			color: #3671d1;
+			text-decoration: none;
+		}
+		
+		.usermenu-popup .link a:active {
+			color: #3671d1;
+			text-decoration: none;
+		}
+		
+		/* -----------------------------------------------------
+					Arrows
+				----------------------------------------------------- */
+		.usermenu-arrow {
+			overflow: hidden;
+			position: absolute;
+		}
+		
+		.usermenu-arrow:after {
+			content: "";
+			position: absolute;
+			width: 27px;
+			height: 28px;
+			-webkit-transform: rotate(45deg);
+			-moz-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			-o-transform: rotate(45deg);
+		}
+		
+		.usermenu-north .usermenu-arrow,.usermenu-south .usermenu-arrow {
+			display: block;
+			width: 56px;
+			height: 18px;
+			left: 70%;
+			margin-left: -18px;
+		}
+		
+		.usermenu-north .usermenu-arrow {
+			top: -18px;
+			left: 80%;
+			margin-left: -13px;
+		}
+		
+		.usermenu-north .usermenu-arrow:after {
+			top: 10px;
+		}
+		
+		.usermenu-south .usermenu-arrow {
+			bottom: -18px;
+		}
+		
+		.usermenu-south .usermenu-arrow:after {
+			bottom: 10px;
+		}
+		
+		.usermenu-east .usermenu-arrow,.usermenu-west .usermenu-arrow {
+			display: block;
+			width: 18px;
+			height: 28px;
+			top: 55%;
+		}
+		
+		.usermenu-east .usermenu-arrow {
+			right: 13px;
+			margin-top: -18px;
+			right: -18px;
+		}
+		
+		.usermenu-east .usermenu-arrow:after {
+			right: 10px;
+		}
+		
+		.usermenu-west .usermenu-arrow {
+			margin-top: -18px;
+			left: -18px;
+		}
+		
+		.usermenu-west .usermenu-arrow:after {
+			left: 10px;
+		}
+		
+		.usermenu-header {
+			font-family: arial, helvetica, sans-serif;
+			font-size: 16px;
+			font-weight: bold;
+			color: #000;
+			padding: 15px;
+			border-bottom: #C8C8C8 solid 1px;
+		}
+		
+		.usermenu-info {
+			font-family: arial, helvetica, sans-serif;
+			font-size: 14px;
+			font-weight: normal;
+			padding-right: 8px;
+		}
+		
+		.loginPanel {
+	        padding: 20px;
+	
+	    }
+	    
+	    .registerPanel {
+	        padding: 20px;
+	        background: #f3f3f3;
+	    }
+	</ui:style>
+	<g:HTMLPanel ui:field="menu">
+		<div class="{style.usermenu-popup}">
+			<div class="{style.usermenu-north}">
+			  <div class="{style.loginPanel}" >
+ 			       <b:Input ui:field="inputSubject" captionOnLeft="true" caption="Тема" styleName="hangbottom" width="250px"/>
+		           <b:MultilineInput ui:field="inputText" captionOnLeft="true"  caption="Сообщение" styleName="hangbottom" width="250px" inputHeight="200px"/>
+		           <g:HorizontalPanel spacing="10">
+		               <g:Button ui:field="sendButton" styleName="bluebutton"  text="Отправить"/>
+		               <g:Button ui:field="cancelButton" styleName="greybutton" text="Отменить"/>
+		           </g:HorizontalPanel>
+			  </div>
+  			   <span class="{style.usermenu-arrow}"></span>
+			</div>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder> 

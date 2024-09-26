@@ -15,7 +15,7 @@ import com.google.gwt.user.client.ui.Widget;
 
 public class SuggestBoxEx extends Composite {
 
-	private static SuggestBoxExUiBinder uiBinder = GWT.create(SuggestBoxExUiBinder.class);
+	private static final SuggestBoxExUiBinder uiBinder = GWT.create(SuggestBoxExUiBinder.class);
 
 	interface SuggestBoxExUiBinder extends UiBinder<Widget, SuggestBoxEx> {
 	}

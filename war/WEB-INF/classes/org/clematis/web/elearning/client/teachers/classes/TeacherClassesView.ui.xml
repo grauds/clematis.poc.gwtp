@@ -1,0 +1,101 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'
+	xmlns:b="urn:import:org.clematis.web.elearning.client.ui.input"
+	ui:generateFormat="com.google.gwt.i18n.rebind.format.PropertiesFormat"
+	xmlns:t="urn:import:org.clematis.web.elearning.client.teachers"
+    ui:generateLocales="default">
+    
+<ui:style field="general" src="../../general/general.css" />    
+<ui:with field='res' type='org.clematis.web.elearning.client.resources.Resources' />
+
+<ui:style>
+
+.module-number {
+    color: #CC7C0F;
+    display: inline;
+    float: left;
+    font-family: arial;
+    font-size: 28px;
+    line-height: 41px;
+    margin-right: 10px;
+}
+
+.youTube {
+    background: url("//s.ytimg.com/yt/imgbin/www-refresh-vflk40U3E.png") no-repeat scroll 0 -280px transparent;
+    display: block;
+    height: 40px;
+    width: 100px;
+}
+
+.image {
+    float:center; 
+    margin: 20px; 	
+    cursor: pointer;
+    cursor: hand;
+}
+
+.bulb {
+    display: block;
+    left: 9px;
+    position: relative;
+    top: -12px;
+    float: right;
+}
+
+.topinfo {
+	margin-top: 20px;
+}
+
+</ui:style>
+
+<g:HTMLPanel ui:field="panelContainer" width="100%">
+	<g:HTMLPanel ui:field="panelMain" width="100%">
+		<table  width="100%">
+		    <tr>
+				<td style="vertical-align: top;">
+					<h1 class="text">Список ваших классов и студентов</h1>
+					<ul style="list-style-type: none; margin-top:26px;">
+						<li class="{general.list}">
+								<p class="{general.listText}">
+								    
+								</p>
+						</li>
+					</ul>
+				</td>				
+				<td>
+					<div class="{general.hintbox} hangbottom topinfo">
+					    <g:Image resource="{res.bulb}" styleName="{style.bulb}"/>
+			            <p class="{general.boxtop}">Список классов и студентов</p>
+						<p class="{general.listText}">
+						   Обновите список, чтобы увидеть новых студентов в ваших классах
+						</p>		
+						
+						<g:HorizontalPanel spacing="10" width="100%">
+						    <g:cell horizontalAlignment="ALIGN_RIGHT">
+						        <g:Button ui:field="buttonRefresh" styleName="bluebutton {general.loginbutton} hangbottom">Обновить</g:Button>
+						    </g:cell>								
+						</g:HorizontalPanel>					
+ 				   </div>
+				</td>
+			</tr>
+			<tr>
+				<td style="vertical-align: top;">
+				   <g:VerticalPanel ui:field="classesList" />
+				   <g:HTMLPanel ui:field="messagePanel">
+				       <p class="{general.listText}">
+							<g:Image styleName="{style.image}" resource="{res.loader}"/>
+						</p>
+				       <p class="{general.listHeader}">
+							Загружаем список классов...
+						</p>
+				   </g:HTMLPanel>
+				</td>
+			</tr>		
+		</table>
+	</g:HTMLPanel>
+	
+</g:HTMLPanel>
+
+</ui:UiBinder>

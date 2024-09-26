@@ -15,7 +15,8 @@ import org.clematis.web.elearning.shared.domain.Course;
 import org.clematis.web.elearning.shared.domain.CoursesGroup;
 import org.clematis.web.elearning.shared.domain.Teacher;
 
-import com.gwtplatform.dispatch.rpc.shared.DispatchAsync;
+import com.google.gwt.core.client.GWT;
+import com.gwtplatform.dispatch.shared.DispatchAsync;
 import com.gwtplatform.mvp.client.ViewImpl;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.event.shared.HandlerRegistration;
@@ -39,15 +40,16 @@ public class CoursesView extends ViewImpl implements CoursesPresenter.MyView, Co
 	private final DispatchAsync dispatcher;
 	private final EventBus eventBus;
 	
-	private final List<CoursesGroupListWidget> coursesGroupsWidgets = new ArrayList<CoursesGroupListWidget>();
-	private final List<HandlerRegistration> coursesHandlers = new ArrayList<HandlerRegistration>(); 
-	
+	private final List<CoursesGroupListWidget> coursesGroupsWidgets = new ArrayList<>();
+	private final List<HandlerRegistration> coursesHandlers = new ArrayList<>();
+
+	private static final Binder uiBinder = GWT.create(Binder.class);
 	public interface Binder extends UiBinder<Widget, CoursesView> {
 	}
 
 	@Inject
-	public CoursesView(final Binder binder, final DispatchAsync dispatcher, final EventBus eventBus) {
-		widget = binder.createAndBindUi(this);
+	public CoursesView(final DispatchAsync dispatcher, final EventBus eventBus) {
+		widget = uiBinder.createAndBindUi(this);
 
 		messagePanel.setVisible(false);
 		searchMessagePanel.setVisible(false);
@@ -65,29 +67,29 @@ public class CoursesView extends ViewImpl implements CoursesPresenter.MyView, Co
 	public void showCourses(GetCoursesGroupResult result) {
         coursesGroupsList.clear();
         coursesGroupsWidgets.clear();
-        /**
+        /*
          * Unregister old listeners
          */
         for (HandlerRegistration registration : coursesHandlers){
         	registration.removeHandler();
         }
         coursesHandlers.clear();
-        /**
+        /*
          * Show new tree
          */
         if ( result != null ) {
             for ( CoursesGroup coursesGroup : result.getCoursesGroups() ) {
             	CoursesGroupListWidget coursesGroupListWidget = new CoursesGroupListWidget(coursesGroup);
-            	/**
+            	/*
             	 * Register listeners
             	 */
             	coursesHandlers.add(coursesGroupListWidget.addCoursesSelectedEventHandler(this));
             	coursesHandlers.addAll(coursesGroupListWidget.addCourseSelectedEventHandler(this));
-            	/**
+            	/*
             	 * Add to list of widgets
             	 */
             	coursesGroupsWidgets.add(coursesGroupListWidget);
-            	/**
+            	/*
             	 * Add to list of handlers
             	 */
             	coursesGroupsList.add(coursesGroupListWidget);
@@ -136,7 +138,7 @@ public class CoursesView extends ViewImpl implements CoursesPresenter.MyView, Co
 		showTeachersLoader(true);
 		dispatcher.execute(
 			new GetTeachersAction.Builder().courses(getSelectedCourses()).build(),
-			new AsyncCallback<>() {
+			new AsyncCallback<GetTeachersResult>() {
 
 			@Override
 			public void onFailure(Throwable caught) {
@@ -158,7 +160,7 @@ public class CoursesView extends ViewImpl implements CoursesPresenter.MyView, Co
 		showTeachersLoader(true);
 		dispatcher.execute(
 			new GetTeachersAction.Builder().courses(getSelectedCourses()).build(),
-			new AsyncCallback<>() {
+			new AsyncCallback<GetTeachersResult>() {
 
 			@Override
 			public void onFailure(Throwable caught) {
@@ -175,7 +177,7 @@ public class CoursesView extends ViewImpl implements CoursesPresenter.MyView, Co
 	}
 
 	private List<Course> getSelectedCourses() {
-		List<Course> courses = new ArrayList<Course>();
+		List<Course> courses = new ArrayList<>();
 		
 		for (CoursesGroupListWidget coursesGroupListWidget : coursesGroupsWidgets) {
 			for (CourseListWidget courseListWidget : coursesGroupListWidget.getCourseWidgets()) {

@@ -8,10 +8,10 @@ import org.clematis.web.elearning.client.ui.input.Input;
 import org.clematis.web.elearning.client.ui.input.MailInput;
 import org.clematis.web.elearning.client.ui.input.PasswordInput;
 
-import com.gwtplatform.dispatch.rpc.shared.DispatchAsync;
+import com.gwtplatform.dispatch.shared.DispatchAsync;
 import com.gwtplatform.mvp.client.ViewImpl;
 import com.gwtplatform.mvp.client.proxy.PlaceManager;
-import com.gwtplatform.mvp.shared.proxy.PlaceRequest;
+import com.gwtplatform.mvp.client.proxy.PlaceRequest;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.uibinder.client.UiBinder;

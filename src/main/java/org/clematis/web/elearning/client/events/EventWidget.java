@@ -20,7 +20,7 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Widget;
-import com.gwtplatform.dispatch.rpc.shared.DispatchAsync;
+import com.gwtplatform.dispatch.shared.DispatchAsync;
 
 public class EventWidget extends Composite {
 

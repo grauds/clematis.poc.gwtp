@@ -1,0 +1,119 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:b="urn:import:org.clematis.web.elearning.client.ui.input"
+	ui:generateFormat="com.google.gwt.i18n.rebind.format.PropertiesFormat"
+    ui:generateLocales="default">
+    
+<ui:style field="general" src="general.css" />    
+<ui:with field='res' type='org.clematis.web.elearning.client.resources.Resources' />
+
+<ui:style>
+
+.module-number {
+    color: #CC7C0F;
+    display: inline;
+    float: left;
+    font-family: arial;
+    font-size: 48px;
+    line-height: 41px;
+    width: 40px;
+}
+
+.youTube {
+    background: url("//s.ytimg.com/yt/imgbin/www-refresh-vflk40U3E.png") no-repeat scroll 0 -280px transparent;
+    display: block;
+    height: 40px;
+    width: 100px;
+}
+
+.bulb {
+    display: block;
+    left: 9px;
+    position: relative;
+    top: -12px;
+    float: right;
+}
+
+
+</ui:style>
+
+<g:HTMLPanel ui:field="panelContainer">
+	<g:HTMLPanel ui:field="panelMain">
+		<table>
+			<tr>
+				<td style="vertical-align: top;">
+					<h1 class="text">Добро пожаловать на страницы Академии Иностранных Языков Левиндорф</h1>
+					<h2 class="text">Наши преимущества:</h2>
+					<ul style="list-style-type: none; margin-top:26px;">
+						<li class="{general.list}">
+							<span class="{style.module-number}">1</span>						
+								<p class="{general.listHeader}">Гарантия удовлетворённости</p>
+								<p class="{general.listText}">
+									При завершении бесплатного тестового периода вы сможете продолжить
+									работу со всеми введёнными ранее данными.
+									Стоимость услуги &mdash; 600 рублей в месяц за одного зарегистрированного пользователя.
+									Мы уверены, что вы останетесь довольны качеством нашего сервиса! Поэтому мы гарантируем, что
+									в случае, если вы в первый месяц работы решите отказаться от дальнейшего его использования,
+									мы вернём вам все оплаченные средства.
+								</p>
+						</li>
+						<li class="{general.list}">
+							<span class="{style.module-number}">2</span>						
+								<p class="{general.listHeader}">Только высококлассные преподаватели</p>
+								<p class="{general.listText}">
+									Наши преподаватели имеют сертификаты и дипломы, подтверждающие их высочайший уровень
+									квалификации. Каждый преподаватель записывает ролик о себе и выкладывает его на наш канал в YouTube.
+									Вы можете ознакомиться со стилем преподавания заранее, перед тем как выбрать преподавателя.
+								</p>
+						</li>
+						<li class="{general.list}">
+							<span class="{style.module-number}">3</span>
+						     <p class="{general.listHeader}">Преподавание в видео-классах</p>
+						     <p class="{general.listText}">
+									Собственный видео-компонент на основе Adobe Media Server &copy; позволяет преподавать в классах до 16 человек,
+									обеспечивает высокое качество видео и аудио трансляции. В видео-классах также проводятся семинары и тестирование.
+									<br />
+							 </p>
+							 <p class="{general.listText}">
+									<br />
+							 </p>			    
+							
+						</li>
+					</ul>
+				</td>
+				<td>
+					<div class="{general.greybox} hangbottom">
+					        <div class="{style.youTube}"/>
+							<p class="{general.boxtop}">Канал Академии</p>
+							<p class="{general.listText}">Ролики презентаций, скринкасты, 
+							видео преподавателей и архивы лекций. Подпишитесь сегодня!
+							</p>
+							<g:HorizontalPanel spacing="10" width="100%">
+							    <g:cell horizontalAlignment="ALIGN_RIGHT">
+							        <g:Button ui:field="buttonLogin" styleName="bluebutton {general.loginbutton} hangbottom">Посетить</g:Button>
+							    </g:cell>								
+							</g:HorizontalPanel>							
+  				   </div>
+				</td>
+			</tr>
+			<tr>			    
+				<td>
+				    <h2 class="text">Демонстрационное видео:</h2>
+					<iframe width="420" height="315" src="http://www.youtube.com/embed/0IDTT4GfqrA" frameborder="0"></iframe>
+				</td>
+				<td>
+					<div class="{general.hintbox} hangbottom topinfo">
+					    <g:Image resource="{res.bulb}" styleName="{style.bulb}"/>
+			            <p class="{general.boxtop}">Демонстрационнное видео</p>
+						<p class="{general.listText}">Посмотрите демонстрационное видео, если вы испытываете трудности с навигацией по сайту,
+						регистрацией и другими действиями. В случае, если вопросы остаются, напишите в службу поддержки. </p>						
+ 				   </div>
+				</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+	
+</g:HTMLPanel>
+
+</ui:UiBinder>

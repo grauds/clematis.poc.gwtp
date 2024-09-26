@@ -13,8 +13,8 @@ import org.clematis.web.elearning.shared.domain.EmailAddress;
 import org.clematis.web.elearning.shared.domain.StudentsClass;
 import org.clematis.web.elearning.shared.domain.User;
 
-import com.gwtplatform.dispatch.rpc.server.ExecutionContext;
-import com.gwtplatform.dispatch.rpc.server.actionhandler.ActionHandler;
+import com.gwtplatform.dispatch.server.ExecutionContext;
+import com.gwtplatform.dispatch.server.actionhandler.ActionHandler;
 import com.gwtplatform.dispatch.shared.ActionException;
 
 public class GetTeacherClassesHandler extends BasicHandler implements ActionHandler<GetTeacherClassesAction, GetTeacherClassesResult>  {

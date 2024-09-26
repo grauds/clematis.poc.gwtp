@@ -1,0 +1,78 @@
+<!doctype html>
+<!-- The DOCTYPE declaration above will set the    -->
+<!-- browser's rendering engine into               -->
+<!-- "Standards Mode". Replacing this declaration  -->
+<!-- with a "Quirks Mode" doctype may lead to some -->
+<!-- differences in layout.                        -->
+
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<title>ELP PROTOTYPE 0.0.2.0 - 28 April 2012</title>
+		<script type="text/javascript" language="javascript" src="elp.client/elp.client.nocache.js"></script>
+<style>
+#loading
+{
+    position: absolute;
+    left: 45%;
+    top: 45%;
+    padding: 2px;
+    z-index: 20001;
+    height: auto;
+    border: 1px solid #fff;
+}
+
+loading a
+{
+    color: #225588;
+}
+
+loading .loading-ind
+{
+    background: white;
+    color: #444;
+    font: bold 14px tahoma, arial, helvetica;
+    padding: 10px;
+    margin: 0;
+    height: auto;
+}
+
+.loading-message
+{
+    font: normal 13px arial, tahoma, sans-serif;
+    padding: 5px;
+}
+
+body {
+    background: url("images/bg_dotted.png") repeat scroll 0 0 transparent;
+    color: #333333;
+}
+
+</style>		
+	</head>	
+
+	<!--                                           -->
+	<!-- The body can have arbitrary html, or      -->
+	<!-- you can leave the body empty if you want  -->
+	<!-- to create a completely dynamic UI.        -->
+	<!--                                           -->
+	<body>
+
+	<div id="loading">
+    	<div class="loading-ind">
+        	<!--span class="loading-message" style="padding-left: 10px;">Прототип загружается...</span><br-->
+        	<span class="loading-message"><img src="images/loader.gif" /></span>
+    	</div>
+	</div>
+		<!-- OPTIONAL: include this if you want history support -->
+		<iframe src="javascript:''" id="__gwt_historyFrame" tabIndex='-1' style="position: absolute; width: 0;height: 0; border: 0;"></iframe>
+
+		<!-- RECOMMENDED if your web app will not function without JavaScript enabled -->
+		<noscript>
+			<div style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif;">
+				Your web browser must have JavaScript enabled
+				in order for this application to display correctly.
+			</div>
+		</noscript>
+	</body>
+</html>

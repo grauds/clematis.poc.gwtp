@@ -28,10 +28,10 @@ import com.google.gwt.user.client.ui.PopupPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.inject.Inject;
-import com.gwtplatform.dispatch.rpc.shared.DispatchAsync;
+import com.gwtplatform.dispatch.shared.DispatchAsync;
 import com.gwtplatform.mvp.client.ViewImpl;
 import com.gwtplatform.mvp.client.proxy.PlaceManager;
-import com.gwtplatform.mvp.shared.proxy.PlaceRequest;
+import com.gwtplatform.mvp.client.proxy.PlaceRequest;
 
 
 public class GeneralPageView extends ViewImpl implements GeneralPageViewInterface {

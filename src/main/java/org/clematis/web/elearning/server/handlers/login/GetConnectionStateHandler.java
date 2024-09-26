@@ -24,8 +24,8 @@ import org.clematis.web.elearning.shared.domain.UserRole;
 
 import com.google.inject.Inject;
 import com.google.inject.Provider;
-import com.gwtplatform.dispatch.rpc.server.ExecutionContext;
-import com.gwtplatform.dispatch.rpc.server.actionhandler.ActionHandler;
+import com.gwtplatform.dispatch.server.ExecutionContext;
+import com.gwtplatform.dispatch.server.actionhandler.ActionHandler;
 import com.gwtplatform.dispatch.shared.ActionException;
 
 

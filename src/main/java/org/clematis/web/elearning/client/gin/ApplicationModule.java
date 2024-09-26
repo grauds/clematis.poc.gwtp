@@ -7,19 +7,15 @@ import com.google.inject.Singleton;
 import com.gwtplatform.dispatch.shared.SecurityCookie;
 import com.gwtplatform.mvp.client.RootPresenter;
 import com.gwtplatform.mvp.client.gin.AbstractPresenterModule;
-import com.gwtplatform.mvp.shared.proxy.ParameterTokenFormatter;
 import com.gwtplatform.mvp.client.proxy.PlaceManager;
-import com.gwtplatform.mvp.shared.proxy.TokenFormatter;
+import com.gwtplatform.mvp.client.proxy.ParameterTokenFormatter;
+import com.gwtplatform.mvp.client.proxy.TokenFormatter;
 
 import org.clematis.web.elearning.client.courses.CoursesPresenter;
 import org.clematis.web.elearning.client.courses.CoursesView;
 import org.clematis.web.elearning.client.general.GeneralPagePresenter;
 import org.clematis.web.elearning.client.general.GeneralPageView;
 import org.clematis.web.elearning.client.place.ApplicationPlaceManager;
-import org.clematis.web.elearning.client.ui.ElementsFactory.ElementsFactoryFactory;
-import org.clematis.web.elearning.client.ui.ElementsForm.ElementsFormFactory;
-import org.clematis.web.elearning.client.ui.MenuBlockItemWidget.MenuBlockItemWidgetFactory;
-import org.clematis.web.elearning.client.ui.MenuListItemWidget.MenuListItemWidgetFactory;
 import org.clematis.web.elearning.client.place.DefaultPlace;
 import org.clematis.web.elearning.client.place.ErrorPlace;
 import org.clematis.web.elearning.client.place.NameTokens;
@@ -33,26 +29,30 @@ import org.clematis.web.elearning.client.general.MainPagePresenter;
 import org.clematis.web.elearning.client.general.MainPageView;
 import org.clematis.web.elearning.client.login.signin.SignInPresenter;
 import org.clematis.web.elearning.client.login.signin.SignInView;
+import org.clematis.web.elearning.client.students.budget.BudgetLinePresenter;
+import org.clematis.web.elearning.client.students.budget.BudgetLineView;
+import org.clematis.web.elearning.client.teachers.classes.TeacherClassesPresenter;
+import org.clematis.web.elearning.client.teachers.classes.TeacherClassesView;
+import org.clematis.web.elearning.client.teachers.courses.SelectCoursesPresenter;
+import org.clematis.web.elearning.client.teachers.courses.SelectCoursesView;
+import org.clematis.web.elearning.client.teachers.schedule.SchedulePresenter;
+import org.clematis.web.elearning.client.teachers.schedule.ScheduleView;
 import org.clematis.web.elearning.client.students.schedule.StudentSchedulePresenter;
 import org.clematis.web.elearning.client.students.schedule.StudentScheduleView;
 import org.clematis.web.elearning.client.students.video.StudentVideoRoomPresenter;
 import org.clematis.web.elearning.client.students.video.StudentVideoRoomView;
 import org.clematis.web.elearning.client.teachers.video.TeacherVideoRoomPresenter;
 import org.clematis.web.elearning.client.teachers.video.TeacherVideoRoomView;
-import org.clematis.web.elearning.client.teachers.courses.SelectCoursesPresenter;
-import org.clematis.web.elearning.client.teachers.courses.SelectCoursesView;
-import org.clematis.web.elearning.client.teachers.classes.TeacherClassesPresenter;
-import org.clematis.web.elearning.client.teachers.classes.TeacherClassesView;
-import org.clematis.web.elearning.client.teachers.schedule.SchedulePresenter;
-import org.clematis.web.elearning.client.teachers.schedule.ScheduleView;
-import org.clematis.web.elearning.client.students.budget.BudgetLinePresenter;
-import org.clematis.web.elearning.client.students.budget.BudgetLineView;
+import org.clematis.web.elearning.client.ui.ElementsFactory.ElementsFactoryFactory;
+import org.clematis.web.elearning.client.ui.ElementsForm.ElementsFormFactory;
+import org.clematis.web.elearning.client.ui.MenuBlockItemWidget.MenuBlockItemWidgetFactory;
+import org.clematis.web.elearning.client.ui.MenuListItemWidget.MenuListItemWidgetFactory;
 
 public class ApplicationModule extends AbstractPresenterModule {
 
 	@Override
 	protected void configure() {
-		
+
 		bind(EventBus.class).to(SimpleEventBus.class).in(Singleton.class);
 		bind(PlaceManager.class).to(ApplicationPlaceManager.class).in(Singleton.class);
 		bind(TokenFormatter.class).to(ParameterTokenFormatter.class).in(Singleton.class);

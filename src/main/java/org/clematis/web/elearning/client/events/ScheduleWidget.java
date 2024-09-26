@@ -33,7 +33,7 @@ import com.google.gwt.user.client.ui.PopupPanel;
 import com.google.gwt.user.client.ui.ScrollPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.Widget;
-import com.gwtplatform.dispatch.rpc.shared.DispatchAsync;
+import com.gwtplatform.dispatch.shared.DispatchAsync;
 
 public class ScheduleWidget extends Composite {
 

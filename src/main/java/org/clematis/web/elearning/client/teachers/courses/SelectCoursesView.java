@@ -10,7 +10,7 @@ import org.clematis.web.elearning.client.general.ShowErrorMessageEvent;
 import org.clematis.web.elearning.shared.domain.Course;
 import org.clematis.web.elearning.shared.domain.CoursesGroup;
 
-import com.gwtplatform.dispatch.rpc.shared.DispatchAsync;
+import com.gwtplatform.dispatch.shared.DispatchAsync;
 import com.gwtplatform.mvp.client.ViewImpl;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.shared.EventBus;
@@ -38,7 +38,7 @@ public class SelectCoursesView extends ViewImpl implements SelectCoursesPresente
 	private final DispatchAsync dispatcher;
 	private final EventBus eventBus;
 	
-	private final List<CoursesGroupListWidget> coursesGroupsWidgets = new ArrayList<CoursesGroupListWidget>();
+	private final List<CoursesGroupListWidget> coursesGroupsWidgets = new ArrayList<>();
 
 	@Inject
 	public SelectCoursesView(final Binder binder, final DispatchAsync dispatcher, final EventBus eventBus) {
@@ -57,19 +57,19 @@ public class SelectCoursesView extends ViewImpl implements SelectCoursesPresente
 	public void showCourses(List<CoursesGroup> coursesGroups, List<Course> courses) {
         coursesGroupsList.clear();
         coursesGroupsWidgets.clear();
-        /**
+        /*
          * Show new tree
          */
         for ( CoursesGroup coursesGroup : coursesGroups ) {
-        	/**
+        	/*
         	 * Create widget for group
         	 */
         	CoursesGroupListWidget coursesGroupListWidget = new CoursesGroupListWidget(coursesGroup, courses);
-        	/**
+        	/*
         	 * Add to list of widgets
         	 */
         	coursesGroupsWidgets.add(coursesGroupListWidget);
-        	/**
+        	/*
         	 * Add to layout
         	 */
         	coursesGroupsList.add(coursesGroupListWidget);
@@ -105,7 +105,7 @@ public class SelectCoursesView extends ViewImpl implements SelectCoursesPresente
 	}	
 
 	private List<Course> getSelectedCourses() {
-		List<Course> courses = new ArrayList<Course>();
+		List<Course> courses = new ArrayList<>();
 		
 		for (CoursesGroupListWidget coursesGroupListWidget : coursesGroupsWidgets) {
 			for (CourseListWidget courseListWidget : coursesGroupListWidget.getCourseWidgets()) {
