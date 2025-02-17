@@ -1,2 +1,3 @@
 flash/* linguist-vendored
 war/* linguist-vendored
+*.html linguist-generated
