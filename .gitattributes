@@ -1,3 +1,6 @@
 flash/* linguist-vendored
 war/* linguist-vendored
+*.fla linguist-vendored
+*.swf linguist-vendored
+*.as linguist-vendored
 *.html linguist-generated
