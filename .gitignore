@@ -5,3 +5,6 @@
 .settings
 docs
 gwt-unitCache
+*/**/.DS_Store
+.classpath
+clematis.poc.gwtp.iml
